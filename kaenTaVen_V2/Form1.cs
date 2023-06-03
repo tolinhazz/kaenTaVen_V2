@@ -69,7 +69,7 @@ namespace kaenTaVen_V2
                 leftBorderBtn.BringToFront();
                 //Icon Current Child Form
                 iconCurrentChildForm.IconChar = currentBtn.IconChar;
-                iconCurrentChildForm.IconColor = RGBColors.color4;
+                iconCurrentChildForm.IconColor = RGBColors.color1;
                 lblTitleChildForm.Text = currentBtn.Text;
             }
         }
@@ -137,7 +137,8 @@ namespace kaenTaVen_V2
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color4);
+            ActivateButton(sender, RGBColors.color1
+                );
             OpenChildForm(new FormSetting());
 
         }
@@ -153,7 +154,7 @@ namespace kaenTaVen_V2
             DisableButton();
             leftBorderBtn.Visible = false;
             iconCurrentChildForm.IconChar = IconChar.Home;
-            iconCurrentChildForm.IconColor = RGBColors.color4;
+            iconCurrentChildForm.IconColor = RGBColors.color1;
             lblTitleChildForm.Text = "Home";
         }
 
