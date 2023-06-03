@@ -44,7 +44,7 @@ namespace kaenTaVen_V2
         // Structs
         private struct RGBColors
         {
-            public static Color color1 = Color.FromArgb(30, 130, 76);
+            public static Color color4 = Color.FromArgb(30, 130, 76);
             public static Color color2 = Color.FromArgb(0, 230, 64);
             public static Color color3 = Color.FromArgb(38, 166, 91);
         }
@@ -105,39 +105,39 @@ namespace kaenTaVen_V2
         }
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
+            ActivateButton(sender, RGBColors.color4);
             OpenChildForm(new FormDashboard());
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
+            ActivateButton(sender, RGBColors.color4);
             OpenChildForm(new FormOrders());
 
         }
 
         private void btnProduct_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
+            ActivateButton(sender, RGBColors.color4);
             OpenChildForm(new FormInventory());
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
+            ActivateButton(sender, RGBColors.color4);
             OpenChildForm(new FormCustomers());
 
         }
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
+            ActivateButton(sender, RGBColors.color4);
             OpenChildForm(new FormReport());
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
+            ActivateButton(sender, RGBColors.color4);
             OpenChildForm(new FormSetting());
 
         }
