@@ -69,7 +69,7 @@ namespace kaenTaVen_V2
                 leftBorderBtn.BringToFront();
                 //Icon Current Child Form
                 iconCurrentChildForm.IconChar = currentBtn.IconChar;
-                iconCurrentChildForm.IconColor = RGBColors.color1;
+                iconCurrentChildForm.IconColor = RGBColors.color4;
                 lblTitleChildForm.Text = currentBtn.Text;
             }
         }
@@ -153,7 +153,7 @@ namespace kaenTaVen_V2
             DisableButton();
             leftBorderBtn.Visible = false;
             iconCurrentChildForm.IconChar = IconChar.Home;
-            iconCurrentChildForm.IconColor = RGBColors.color1;
+            iconCurrentChildForm.IconColor = RGBColors.color4;
             lblTitleChildForm.Text = "Home";
         }
 
