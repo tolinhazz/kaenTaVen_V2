@@ -44,8 +44,8 @@ namespace kaenTaVen_V2
         // Structs
         private struct RGBColors
         {
-            public static Color color1 = Color.FromArgb(30, 130, 76);
-            public static Color color2 = Color.FromArgb(0, 230, 64);
+            public static Color color1 = Color.FromArgb(41, 110, 1);
+            public static Color color2 = Color.FromArgb(38, 166, 91);
             public static Color color3 = Color.FromArgb(38, 166, 91);
         }
 
@@ -56,20 +56,21 @@ namespace kaenTaVen_V2
             {
                 DisableButton();
                 currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = RGBColors.color2;
-                currentBtn.ForeColor = color;
+                currentBtn.BackColor = RGBColors.color1;
+                currentBtn.ForeColor = Color.White;
+            
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
-                currentBtn.IconColor = color;
+                currentBtn.IconColor = Color.White;
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
                 currentBtn.ImageAlign = ContentAlignment.MiddleRight;
                 // Left border button
-                leftBorderBtn.BackColor = color;
+                leftBorderBtn.BackColor = Color.FromArgb(49, 79, 64);
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
                 //Icon Current Child Form
                 iconCurrentChildForm.IconChar = currentBtn.IconChar;
-                iconCurrentChildForm.IconColor = RGBColors.color1;
+                iconCurrentChildForm.IconColor = RGBColors.color2;
                 lblTitleChildForm.Text = currentBtn.Text;
             }
         }
