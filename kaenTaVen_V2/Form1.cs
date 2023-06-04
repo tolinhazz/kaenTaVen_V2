@@ -30,7 +30,7 @@ namespace kaenTaVen_V2
             p = panelDesktop;
 
             leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(10, 80);
+            leftBorderBtn.Size = new Size(7, 106);
             panelMenu.Controls.Add(leftBorderBtn);
             //instance = this;
             p = panelDesktop;
@@ -44,9 +44,8 @@ namespace kaenTaVen_V2
         // Structs
         private struct RGBColors
         {
-            public static Color color1 = Color.FromArgb(41, 110, 1);
+            public static Color color1 = Color.FromArgb(0, 255, 185);
             public static Color color2 = Color.FromArgb(38, 166, 91);
-            public static Color color3 = Color.FromArgb(38, 166, 91);
         }
 
         // Methods
@@ -64,7 +63,7 @@ namespace kaenTaVen_V2
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
                 currentBtn.ImageAlign = ContentAlignment.MiddleRight;
                 // Left border button
-                leftBorderBtn.BackColor = Color.FromArgb(49, 79, 64);
+                leftBorderBtn.BackColor = RGBColors.color2;
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
@@ -80,9 +79,9 @@ namespace kaenTaVen_V2
             if (currentBtn != null)
             {
                 currentBtn.BackColor = Color.FromArgb(255, 255, 255);
-                currentBtn.ForeColor = RGBColors.color3;
+                currentBtn.ForeColor = RGBColors.color2;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
-                currentBtn.IconColor = RGBColors.color3;
+                currentBtn.IconColor = RGBColors.color2;
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
@@ -155,7 +154,7 @@ namespace kaenTaVen_V2
             DisableButton();
             leftBorderBtn.Visible = false;
             iconCurrentChildForm.IconChar = IconChar.Home;
-            iconCurrentChildForm.IconColor = RGBColors.color1;
+            iconCurrentChildForm.IconColor = RGBColors.color2;
             lblTitleChildForm.Text = "Home";
         }
 
@@ -196,6 +195,11 @@ namespace kaenTaVen_V2
         }
 
         private void panelTitleBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void iconCurrentChildForm_Click(object sender, EventArgs e)
         {
 
         }

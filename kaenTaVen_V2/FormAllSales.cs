@@ -16,5 +16,10 @@ namespace kaenTaVen_V2
         {
             InitializeComponent();
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            Form1.instance.OpenChildForm(new FormReport());
+        }
     }
 }

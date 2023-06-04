@@ -59,6 +59,7 @@ namespace kaenTaVen_V2
             this.btnCustomerSaleDetail.TabIndex = 7;
             this.btnCustomerSaleDetail.Text = "Customer Sale Detail";
             this.btnCustomerSaleDetail.UseVisualStyleBackColor = true;
+            this.btnCustomerSaleDetail.Click += new System.EventHandler(this.btnCustomerSaleDetail_Click);
             // 
             // btnAllSales
             // 
@@ -73,12 +74,13 @@ namespace kaenTaVen_V2
             this.btnAllSales.TabIndex = 6;
             this.btnAllSales.Text = "All Sales";
             this.btnAllSales.UseVisualStyleBackColor = true;
+            this.btnAllSales.Click += new System.EventHandler(this.btnAllSales_Click);
             // 
             // FormReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(215)))));
+            this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(1044, 617);
             this.Controls.Add(this.btnCustomerSaleDetail);
             this.Controls.Add(this.btnAllSales);

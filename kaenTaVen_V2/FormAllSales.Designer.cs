@@ -35,6 +35,7 @@ namespace kaenTaVen_V2
             this.txtDateDelivery = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,12 +98,26 @@ namespace kaenTaVen_V2
             this.label1.TabIndex = 14;
             this.label1.Text = "Date Delivery";
             // 
+            // iconButton1
+            // 
+            this.iconButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(64, 21);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(50, 50);
+            this.iconButton1.TabIndex = 24;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
             // FormAllSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(242)))), ((int)(((byte)(215)))));
+            this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(1044, 617);
+            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtDateReceived);
@@ -126,5 +141,6 @@ namespace kaenTaVen_V2
         private System.Windows.Forms.TextBox txtDateDelivery;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

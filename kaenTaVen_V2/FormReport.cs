@@ -16,5 +16,15 @@ namespace kaenTaVen_V2
         {
             InitializeComponent();
         }
+
+        private void btnAllSales_Click(object sender, EventArgs e)
+        {
+            Form1.instance.OpenChildForm(new FormAllSales());
+        }
+
+        private void btnCustomerSaleDetail_Click(object sender, EventArgs e)
+        {
+            Form1.instance.OpenChildForm(new FormCustomerSale());
+        }
     }
 }
