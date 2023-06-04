@@ -79,7 +79,7 @@ namespace kaenTaVen_V2
             if (currentBtn != null)
             {
                 currentBtn.BackColor = Color.FromArgb(255, 255, 255);
-                currentBtn.ForeColor = RGBColors.color2;
+                currentBtn.ForeColor = Color.Black;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = RGBColors.color2;
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
