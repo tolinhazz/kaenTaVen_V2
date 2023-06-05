@@ -71,9 +71,8 @@ namespace kaenTaVen_V2
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.ForeColor = System.Drawing.Color.Black;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(302, 1055);
+            this.panelMenu.Size = new System.Drawing.Size(150, 844);
             this.panelMenu.TabIndex = 0;
             // 
             // btnSetting
@@ -82,22 +81,19 @@ namespace kaenTaVen_V2
             this.btnSetting.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSetting.FlatAppearance.BorderSize = 0;
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetting.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetting.ForeColor = System.Drawing.Color.Black;
             this.btnSetting.IconChar = FontAwesome.Sharp.IconChar.Tools;
             this.btnSetting.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
             this.btnSetting.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSetting.IconSize = 40;
-            this.btnSetting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.Location = new System.Drawing.Point(0, 902);
-            this.btnSetting.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSetting.Location = new System.Drawing.Point(0, 674);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Padding = new System.Windows.Forms.Padding(11, 0, 22, 0);
-            this.btnSetting.Size = new System.Drawing.Size(302, 134);
+            this.btnSetting.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnSetting.Size = new System.Drawing.Size(150, 107);
             this.btnSetting.TabIndex = 6;
             this.btnSetting.Text = "Setting";
-            this.btnSetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnSetting.UseVisualStyleBackColor = false;
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
             // 
@@ -107,22 +103,19 @@ namespace kaenTaVen_V2
             this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReport.FlatAppearance.BorderSize = 0;
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.ForeColor = System.Drawing.Color.Black;
             this.btnReport.IconChar = FontAwesome.Sharp.IconChar.MailBulk;
             this.btnReport.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
             this.btnReport.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnReport.IconSize = 40;
-            this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReport.Location = new System.Drawing.Point(0, 768);
-            this.btnReport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnReport.Location = new System.Drawing.Point(0, 567);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Padding = new System.Windows.Forms.Padding(11, 0, 22, 0);
-            this.btnReport.Size = new System.Drawing.Size(302, 134);
+            this.btnReport.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnReport.Size = new System.Drawing.Size(150, 107);
             this.btnReport.TabIndex = 5;
             this.btnReport.Text = "Report";
-            this.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnReport.UseVisualStyleBackColor = false;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
@@ -132,22 +125,19 @@ namespace kaenTaVen_V2
             this.btnCustomer.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCustomer.FlatAppearance.BorderSize = 0;
             this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomer.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomer.ForeColor = System.Drawing.Color.Black;
             this.btnCustomer.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
             this.btnCustomer.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
             this.btnCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCustomer.IconSize = 40;
-            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 634);
-            this.btnCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCustomer.Location = new System.Drawing.Point(0, 460);
             this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Padding = new System.Windows.Forms.Padding(11, 0, 22, 0);
-            this.btnCustomer.Size = new System.Drawing.Size(302, 134);
+            this.btnCustomer.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnCustomer.Size = new System.Drawing.Size(150, 107);
             this.btnCustomer.TabIndex = 4;
             this.btnCustomer.Text = "Customers";
-            this.btnCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnCustomer.UseVisualStyleBackColor = false;
             this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
@@ -157,22 +147,19 @@ namespace kaenTaVen_V2
             this.btnInventory.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnInventory.FlatAppearance.BorderSize = 0;
             this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventory.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventory.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInventory.ForeColor = System.Drawing.Color.Black;
             this.btnInventory.IconChar = FontAwesome.Sharp.IconChar.Tag;
             this.btnInventory.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
             this.btnInventory.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInventory.IconSize = 40;
-            this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.Location = new System.Drawing.Point(0, 500);
-            this.btnInventory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnInventory.Location = new System.Drawing.Point(0, 353);
             this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Padding = new System.Windows.Forms.Padding(11, 0, 22, 0);
-            this.btnInventory.Size = new System.Drawing.Size(302, 134);
+            this.btnInventory.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnInventory.Size = new System.Drawing.Size(150, 107);
             this.btnInventory.TabIndex = 3;
             this.btnInventory.Text = "Inventory";
-            this.btnInventory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInventory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnInventory.UseVisualStyleBackColor = false;
             this.btnInventory.Click += new System.EventHandler(this.btnProduct_Click);
             // 
@@ -182,22 +169,19 @@ namespace kaenTaVen_V2
             this.btnOrder.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnOrder.FlatAppearance.BorderSize = 0;
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrder.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrder.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrder.ForeColor = System.Drawing.Color.Black;
             this.btnOrder.IconChar = FontAwesome.Sharp.IconChar.ShoppingCart;
             this.btnOrder.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
             this.btnOrder.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnOrder.IconSize = 40;
-            this.btnOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrder.Location = new System.Drawing.Point(0, 366);
-            this.btnOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnOrder.Location = new System.Drawing.Point(0, 246);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Padding = new System.Windows.Forms.Padding(11, 0, 22, 0);
-            this.btnOrder.Size = new System.Drawing.Size(302, 134);
+            this.btnOrder.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnOrder.Size = new System.Drawing.Size(150, 107);
             this.btnOrder.TabIndex = 2;
             this.btnOrder.Text = "Orders";
-            this.btnOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnOrder.UseVisualStyleBackColor = false;
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
@@ -207,22 +191,19 @@ namespace kaenTaVen_V2
             this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDashboard.FlatAppearance.BorderSize = 0;
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDashboard.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.Black;
             this.btnDashboard.IconChar = FontAwesome.Sharp.IconChar.BarChart;
             this.btnDashboard.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
             this.btnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDashboard.IconSize = 40;
-            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 232);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 139);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Padding = new System.Windows.Forms.Padding(11, 0, 22, 0);
-            this.btnDashboard.Size = new System.Drawing.Size(302, 134);
+            this.btnDashboard.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnDashboard.Size = new System.Drawing.Size(150, 107);
             this.btnDashboard.TabIndex = 1;
             this.btnDashboard.Text = "Dashboard";
-            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnDashboard.UseVisualStyleBackColor = false;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
@@ -232,18 +213,16 @@ namespace kaenTaVen_V2
             this.panelLogo.Controls.Add(this.btnHome);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(302, 232);
+            this.panelLogo.Size = new System.Drawing.Size(150, 139);
             this.panelLogo.TabIndex = 0;
             // 
             // btnHome
             // 
             this.btnHome.Image = global::kaenTaVen_V2.Properties.Resources.plant_compay;
-            this.btnHome.Location = new System.Drawing.Point(53, 42);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnHome.Location = new System.Drawing.Point(14, 29);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(191, 138);
+            this.btnHome.Size = new System.Drawing.Size(120, 80);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnHome.TabIndex = 1;
             this.btnHome.TabStop = false;
@@ -254,20 +233,18 @@ namespace kaenTaVen_V2
             this.panelDesktop.BackColor = System.Drawing.SystemColors.MenuBar;
             this.panelDesktop.Controls.Add(this.pictureBox1);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(302, 116);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelDesktop.Location = new System.Drawing.Point(150, 93);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1622, 939);
+            this.panelDesktop.Size = new System.Drawing.Size(1560, 751);
             this.panelDesktop.TabIndex = 3;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::kaenTaVen_V2.Properties.Resources.plant_compay;
-            this.pictureBox1.Location = new System.Drawing.Point(639, 231);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(627, 185);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(338, 250);
+            this.pictureBox1.Size = new System.Drawing.Size(300, 200);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -279,11 +256,10 @@ namespace kaenTaVen_V2
             this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.House;
             this.iconCurrentChildForm.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
             this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrentChildForm.IconSize = 45;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(73, 30);
-            this.iconCurrentChildForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.iconCurrentChildForm.IconSize = 40;
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(65, 24);
             this.iconCurrentChildForm.Name = "iconCurrentChildForm";
-            this.iconCurrentChildForm.Size = new System.Drawing.Size(45, 50);
+            this.iconCurrentChildForm.Size = new System.Drawing.Size(40, 40);
             this.iconCurrentChildForm.TabIndex = 0;
             this.iconCurrentChildForm.TabStop = false;
             this.iconCurrentChildForm.Click += new System.EventHandler(this.iconCurrentChildForm_Click);
@@ -293,9 +269,9 @@ namespace kaenTaVen_V2
             this.lblTitleChildForm.AutoSize = true;
             this.lblTitleChildForm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.Black;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(125, 40);
+            this.lblTitleChildForm.Location = new System.Drawing.Point(111, 32);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(81, 28);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(69, 23);
             this.lblTitleChildForm.TabIndex = 1;
             this.lblTitleChildForm.Text = "Home";
             // 
@@ -307,11 +283,10 @@ namespace kaenTaVen_V2
             this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             this.btnExit.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
             this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnExit.IconSize = 39;
-            this.btnExit.Location = new System.Drawing.Point(1582, 0);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnExit.IconSize = 35;
+            this.btnExit.Location = new System.Drawing.Point(1524, 0);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(39, 44);
+            this.btnExit.Size = new System.Drawing.Size(35, 35);
             this.btnExit.TabIndex = 2;
             this.btnExit.TabStop = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -324,11 +299,10 @@ namespace kaenTaVen_V2
             this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
             this.btnMinimize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMinimize.IconSize = 39;
-            this.btnMinimize.Location = new System.Drawing.Point(1490, 0);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMinimize.IconSize = 35;
+            this.btnMinimize.Location = new System.Drawing.Point(1442, 0);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(39, 44);
+            this.btnMinimize.Size = new System.Drawing.Size(35, 35);
             this.btnMinimize.TabIndex = 3;
             this.btnMinimize.TabStop = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
@@ -341,11 +315,10 @@ namespace kaenTaVen_V2
             this.btnMaximize.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
             this.btnMaximize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMaximize.IconSize = 39;
-            this.btnMaximize.Location = new System.Drawing.Point(1536, 0);
-            this.btnMaximize.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMaximize.IconSize = 35;
+            this.btnMaximize.Location = new System.Drawing.Point(1483, 0);
             this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(39, 44);
+            this.btnMaximize.Size = new System.Drawing.Size(35, 35);
             this.btnMaximize.TabIndex = 4;
             this.btnMaximize.TabStop = false;
             this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
@@ -359,23 +332,21 @@ namespace kaenTaVen_V2
             this.panelTitleBar.Controls.Add(this.lblTitleChildForm);
             this.panelTitleBar.Controls.Add(this.iconCurrentChildForm);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(302, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelTitleBar.Location = new System.Drawing.Point(150, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1622, 116);
+            this.panelTitleBar.Size = new System.Drawing.Size(1560, 93);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitleBar_Paint);
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.ClientSize = new System.Drawing.Size(1710, 844);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

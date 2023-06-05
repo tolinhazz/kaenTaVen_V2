@@ -100,7 +100,6 @@ namespace kaenTaVen_V2
             // 
             // iconButton1
             // 
-            this.iconButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;

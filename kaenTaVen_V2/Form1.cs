@@ -18,7 +18,7 @@ namespace kaenTaVen_V2
         public Panel p;
         // Fields
         private IconButton currentBtn;
-        private Panel leftBorderBtn;
+
         public Form currentChildForm;
       
 
@@ -29,9 +29,7 @@ namespace kaenTaVen_V2
             instance = this;
             p = panelDesktop;
 
-            leftBorderBtn = new Panel();
-            leftBorderBtn.Size = new Size(7, 106);
-            panelMenu.Controls.Add(leftBorderBtn);
+       
             //instance = this;
             p = panelDesktop;
             // Form
@@ -59,14 +57,9 @@ namespace kaenTaVen_V2
                 currentBtn.ForeColor = Color.White;
             
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
-                currentBtn.IconColor = Color.White;
-                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
-                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
+                currentBtn.IconColor = Color.White;  
                 // Left border button
-                leftBorderBtn.BackColor = RGBColors.color2;
-                leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
-                leftBorderBtn.Visible = true;
-                leftBorderBtn.BringToFront();
+              
                 //Icon Current Child Form
                 iconCurrentChildForm.IconChar = currentBtn.IconChar;
                 iconCurrentChildForm.IconColor = RGBColors.color2;
@@ -80,10 +73,7 @@ namespace kaenTaVen_V2
             {
                 currentBtn.BackColor = Color.FromArgb(255, 255, 255);
                 currentBtn.ForeColor = Color.Black;
-                currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = RGBColors.color2;
-                currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
-                currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
 
@@ -152,7 +142,6 @@ namespace kaenTaVen_V2
         private void Reset()
         {
             DisableButton();
-            leftBorderBtn.Visible = false;
             iconCurrentChildForm.IconChar = IconChar.Home;
             iconCurrentChildForm.IconColor = RGBColors.color2;
             lblTitleChildForm.Text = "Home";
