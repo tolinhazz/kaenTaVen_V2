@@ -15,9 +15,30 @@ namespace kaenTaVen_V2
         public FormOrders()
         {
             InitializeComponent();
+          
         }
 
         private void FormOrders_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormOrders_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ShadowPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel24_Click(object sender, EventArgs e)
         {
 
         }
