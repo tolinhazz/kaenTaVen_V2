@@ -43,10 +43,10 @@ namespace kaenTaVen_V2
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -69,9 +69,8 @@ namespace kaenTaVen_V2
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.ForeColor = System.Drawing.Color.Black;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(187, 1055);
+            this.panelMenu.Size = new System.Drawing.Size(166, 844);
             this.panelMenu.TabIndex = 0;
             // 
             // btnSetting
@@ -86,11 +85,10 @@ namespace kaenTaVen_V2
             this.btnSetting.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
             this.btnSetting.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSetting.IconSize = 40;
-            this.btnSetting.Location = new System.Drawing.Point(0, 844);
-            this.btnSetting.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSetting.Location = new System.Drawing.Point(0, 674);
             this.btnSetting.Name = "btnSetting";
-            this.btnSetting.Padding = new System.Windows.Forms.Padding(11, 0, 22, 0);
-            this.btnSetting.Size = new System.Drawing.Size(187, 134);
+            this.btnSetting.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnSetting.Size = new System.Drawing.Size(166, 107);
             this.btnSetting.TabIndex = 6;
             this.btnSetting.Text = "Setting";
             this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -109,11 +107,10 @@ namespace kaenTaVen_V2
             this.btnReport.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
             this.btnReport.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnReport.IconSize = 40;
-            this.btnReport.Location = new System.Drawing.Point(0, 710);
-            this.btnReport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnReport.Location = new System.Drawing.Point(0, 567);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Padding = new System.Windows.Forms.Padding(11, 0, 22, 0);
-            this.btnReport.Size = new System.Drawing.Size(187, 134);
+            this.btnReport.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnReport.Size = new System.Drawing.Size(166, 107);
             this.btnReport.TabIndex = 5;
             this.btnReport.Text = "Report";
             this.btnReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -132,11 +129,10 @@ namespace kaenTaVen_V2
             this.btnCustomer.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
             this.btnCustomer.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCustomer.IconSize = 40;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 576);
-            this.btnCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCustomer.Location = new System.Drawing.Point(0, 460);
             this.btnCustomer.Name = "btnCustomer";
-            this.btnCustomer.Padding = new System.Windows.Forms.Padding(11, 0, 22, 0);
-            this.btnCustomer.Size = new System.Drawing.Size(187, 134);
+            this.btnCustomer.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnCustomer.Size = new System.Drawing.Size(166, 107);
             this.btnCustomer.TabIndex = 4;
             this.btnCustomer.Text = "Customers";
             this.btnCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -155,11 +151,10 @@ namespace kaenTaVen_V2
             this.btnInventory.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
             this.btnInventory.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInventory.IconSize = 40;
-            this.btnInventory.Location = new System.Drawing.Point(0, 442);
-            this.btnInventory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnInventory.Location = new System.Drawing.Point(0, 353);
             this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Padding = new System.Windows.Forms.Padding(11, 0, 22, 0);
-            this.btnInventory.Size = new System.Drawing.Size(187, 134);
+            this.btnInventory.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnInventory.Size = new System.Drawing.Size(166, 107);
             this.btnInventory.TabIndex = 3;
             this.btnInventory.Text = "Inventory";
             this.btnInventory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -178,11 +173,10 @@ namespace kaenTaVen_V2
             this.btnOrder.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
             this.btnOrder.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnOrder.IconSize = 40;
-            this.btnOrder.Location = new System.Drawing.Point(0, 308);
-            this.btnOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnOrder.Location = new System.Drawing.Point(0, 246);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Padding = new System.Windows.Forms.Padding(11, 0, 22, 0);
-            this.btnOrder.Size = new System.Drawing.Size(187, 134);
+            this.btnOrder.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnOrder.Size = new System.Drawing.Size(166, 107);
             this.btnOrder.TabIndex = 2;
             this.btnOrder.Text = "Orders";
             this.btnOrder.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -201,11 +195,10 @@ namespace kaenTaVen_V2
             this.btnDashboard.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
             this.btnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDashboard.IconSize = 40;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 174);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 139);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Padding = new System.Windows.Forms.Padding(11, 0, 22, 0);
-            this.btnDashboard.Size = new System.Drawing.Size(187, 134);
+            this.btnDashboard.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnDashboard.Size = new System.Drawing.Size(166, 107);
             this.btnDashboard.TabIndex = 1;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -218,18 +211,16 @@ namespace kaenTaVen_V2
             this.panelLogo.Controls.Add(this.btnHome);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(187, 174);
+            this.panelLogo.Size = new System.Drawing.Size(166, 139);
             this.panelLogo.TabIndex = 0;
             // 
             // btnHome
             // 
             this.btnHome.Image = global::kaenTaVen_V2.Properties.Resources.plant_compay;
-            this.btnHome.Location = new System.Drawing.Point(16, 36);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnHome.Location = new System.Drawing.Point(14, 29);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(135, 100);
+            this.btnHome.Size = new System.Drawing.Size(120, 80);
             this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnHome.TabIndex = 1;
             this.btnHome.TabStop = false;
@@ -240,20 +231,18 @@ namespace kaenTaVen_V2
             this.panelDesktop.BackColor = System.Drawing.SystemColors.MenuBar;
             this.panelDesktop.Controls.Add(this.pictureBox1);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktop.Location = new System.Drawing.Point(187, 76);
-            this.panelDesktop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelDesktop.Location = new System.Drawing.Point(166, 61);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(1737, 979);
+            this.panelDesktop.Size = new System.Drawing.Size(1544, 783);
             this.panelDesktop.TabIndex = 3;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::kaenTaVen_V2.Properties.Resources.plant_compay;
-            this.pictureBox1.Location = new System.Drawing.Point(696, 251);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(619, 201);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(338, 250);
+            this.pictureBox1.Size = new System.Drawing.Size(300, 200);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -265,11 +254,10 @@ namespace kaenTaVen_V2
             this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.House;
             this.iconCurrentChildForm.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
             this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrentChildForm.IconSize = 45;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(60, 13);
-            this.iconCurrentChildForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.iconCurrentChildForm.IconSize = 40;
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(53, 10);
             this.iconCurrentChildForm.Name = "iconCurrentChildForm";
-            this.iconCurrentChildForm.Size = new System.Drawing.Size(45, 50);
+            this.iconCurrentChildForm.Size = new System.Drawing.Size(40, 40);
             this.iconCurrentChildForm.TabIndex = 0;
             this.iconCurrentChildForm.TabStop = false;
             this.iconCurrentChildForm.Click += new System.EventHandler(this.iconCurrentChildForm_Click);
@@ -279,9 +267,9 @@ namespace kaenTaVen_V2
             this.lblTitleChildForm.AutoSize = true;
             this.lblTitleChildForm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.Black;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(112, 23);
+            this.lblTitleChildForm.Location = new System.Drawing.Point(100, 18);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(81, 28);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(69, 23);
             this.lblTitleChildForm.TabIndex = 1;
             this.lblTitleChildForm.Text = "Home";
             // 
@@ -295,34 +283,22 @@ namespace kaenTaVen_V2
             this.panelTitleBar.Controls.Add(this.lblTitleChildForm);
             this.panelTitleBar.Controls.Add(this.iconCurrentChildForm);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(187, 0);
-            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelTitleBar.Location = new System.Drawing.Point(166, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1737, 76);
+            this.panelTitleBar.Size = new System.Drawing.Size(1544, 61);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitleBar_Paint);
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
-            // guna2ControlBox1
+            // guna2Separator1
             // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.FillColor = System.Drawing.SystemColors.MenuBar;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1691, 0);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 37);
-            this.guna2ControlBox1.TabIndex = 2;
-            // 
-            // guna2ControlBox2
-            // 
-            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
-            this.guna2ControlBox2.FillColor = System.Drawing.SystemColors.MenuBar;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1639, 0);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(46, 37);
-            this.guna2ControlBox2.TabIndex = 3;
+            this.guna2Separator1.FillColor = System.Drawing.Color.ForestGreen;
+            this.guna2Separator1.FillThickness = 3;
+            this.guna2Separator1.Location = new System.Drawing.Point(0, 53);
+            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(250, 8);
+            this.guna2Separator1.TabIndex = 3;
             // 
             // guna2ControlBox3
             // 
@@ -330,32 +306,47 @@ namespace kaenTaVen_V2
             this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox3.FillColor = System.Drawing.SystemColors.MenuBar;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1587, 0);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1411, 0);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(46, 37);
+            this.guna2ControlBox3.Size = new System.Drawing.Size(41, 30);
             this.guna2ControlBox3.TabIndex = 3;
             // 
-            // guna2Separator1
+            // guna2ControlBox2
             // 
-            this.guna2Separator1.FillColor = System.Drawing.Color.ForestGreen;
-            this.guna2Separator1.FillThickness = 3;
-            this.guna2Separator1.Location = new System.Drawing.Point(0, 66);
-            this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(281, 10);
-            this.guna2Separator1.TabIndex = 3;
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.SystemColors.MenuBar;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1457, 0);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.Size = new System.Drawing.Size(41, 30);
+            this.guna2ControlBox2.TabIndex = 3;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.FillColor = System.Drawing.SystemColors.MenuBar;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1503, 0);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(40, 30);
+            this.guna2ControlBox1.TabIndex = 2;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.ClientSize = new System.Drawing.Size(1710, 844);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
