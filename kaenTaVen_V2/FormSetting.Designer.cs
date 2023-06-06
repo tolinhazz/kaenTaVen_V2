@@ -30,6 +30,7 @@ namespace kaenTaVen_V2
         private void InitializeComponent()
         {
             this.lblTitleChildForm = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.SuspendLayout();
             // 
             // lblTitleChildForm
@@ -38,19 +39,31 @@ namespace kaenTaVen_V2
             this.lblTitleChildForm.AutoSize = true;
             this.lblTitleChildForm.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.Black;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(460, 298);
+            this.lblTitleChildForm.Location = new System.Drawing.Point(518, 372);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(101, 21);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(120, 24);
             this.lblTitleChildForm.TabIndex = 3;
             this.lblTitleChildForm.Text = "Setting Der";
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.AutoScroll = true;
+            this.guna2Panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(312, 771);
+            this.guna2Panel1.TabIndex = 4;
+            // 
             // FormSetting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.ClientSize = new System.Drawing.Size(1044, 617);
+            this.ClientSize = new System.Drawing.Size(1174, 771);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.lblTitleChildForm);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormSetting";
             this.Text = "FormSetting";
             this.ResumeLayout(false);
@@ -61,5 +74,6 @@ namespace kaenTaVen_V2
         #endregion
 
         private System.Windows.Forms.Label lblTitleChildForm;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

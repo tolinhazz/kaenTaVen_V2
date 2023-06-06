@@ -29,12 +29,11 @@ namespace kaenTaVen_V2
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOrders));
             this.lblTitleChildForm = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -94,7 +93,6 @@ namespace kaenTaVen_V2
             this.guna2TextBox13 = new Guna.UI2.WinForms.Guna2TextBox();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.guna2TextBox11 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -117,23 +115,6 @@ namespace kaenTaVen_V2
             this.lblTitleChildForm.Size = new System.Drawing.Size(156, 40);
             this.lblTitleChildForm.TabIndex = 0;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.checkBox2);
-            this.groupBox3.Controls.Add(this.checkBox1);
-            this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Location = new System.Drawing.Point(201, 1036);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(5);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox3.Size = new System.Drawing.Size(600, 387);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Option";
-            // 
             // textBox4
             // 
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -149,7 +130,7 @@ namespace kaenTaVen_V2
             this.textBox3.Location = new System.Drawing.Point(252, 142);
             this.textBox3.Margin = new System.Windows.Forms.Padding(5);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(240, 43);
+            this.textBox3.Size = new System.Drawing.Size(240, 26);
             this.textBox3.TabIndex = 2;
             // 
             // checkBox2
@@ -196,8 +177,7 @@ namespace kaenTaVen_V2
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(322, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -211,56 +191,57 @@ namespace kaenTaVen_V2
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.panel1.Controls.Add(this.guna2DataGridView1);
             this.panel1.Controls.Add(this.iconButton3);
-            this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(823, 0);
+            this.panel1.Location = new System.Drawing.Point(989, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(892, 883);
+            this.panel1.Size = new System.Drawing.Size(726, 971);
             this.panel1.TabIndex = 14;
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.Honeydew;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.guna2DataGridView1.ColumnHeadersHeight = 4;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(34, 53);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(24, 57);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 62;
             this.guna2DataGridView1.RowTemplate.Height = 28;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(846, 506);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(681, 506);
             this.guna2DataGridView1.TabIndex = 10;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.Honeydew;
             this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -292,9 +273,9 @@ namespace kaenTaVen_V2
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.guna2HtmlLabel17);
             this.groupBox1.Controls.Add(this.guna2HtmlLabel16);
             this.groupBox1.Controls.Add(this.guna2HtmlLabel18);
@@ -302,21 +283,22 @@ namespace kaenTaVen_V2
             this.groupBox1.Controls.Add(this.guna2HtmlLabel14);
             this.groupBox1.Controls.Add(this.guna2HtmlLabel13);
             this.groupBox1.Font = new System.Drawing.Font("Phetsarath OT", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(15, 596);
+            this.groupBox1.Location = new System.Drawing.Point(100, 621);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox1.Size = new System.Drawing.Size(846, 247);
+            this.groupBox1.Size = new System.Drawing.Size(584, 244);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
             // guna2HtmlLabel17
             // 
-            this.guna2HtmlLabel17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.guna2HtmlLabel17.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel17.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel17.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel17.Location = new System.Drawing.Point(201, 47);
+            this.guna2HtmlLabel17.Location = new System.Drawing.Point(169, 45);
             this.guna2HtmlLabel17.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
             this.guna2HtmlLabel17.Size = new System.Drawing.Size(323, 37);
@@ -325,11 +307,12 @@ namespace kaenTaVen_V2
             // 
             // guna2HtmlLabel16
             // 
-            this.guna2HtmlLabel16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.guna2HtmlLabel16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel16.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel16.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel16.Location = new System.Drawing.Point(201, 120);
+            this.guna2HtmlLabel16.Location = new System.Drawing.Point(169, 118);
             this.guna2HtmlLabel16.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
             this.guna2HtmlLabel16.Size = new System.Drawing.Size(323, 37);
@@ -338,11 +321,12 @@ namespace kaenTaVen_V2
             // 
             // guna2HtmlLabel18
             // 
-            this.guna2HtmlLabel18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.guna2HtmlLabel18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel18.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel18.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel18.Location = new System.Drawing.Point(201, 180);
+            this.guna2HtmlLabel18.Location = new System.Drawing.Point(169, 178);
             this.guna2HtmlLabel18.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel18.Name = "guna2HtmlLabel18";
             this.guna2HtmlLabel18.Size = new System.Drawing.Size(323, 37);
@@ -351,11 +335,12 @@ namespace kaenTaVen_V2
             // 
             // guna2HtmlLabel15
             // 
-            this.guna2HtmlLabel15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.guna2HtmlLabel15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel15.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel15.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel15.Location = new System.Drawing.Point(74, 180);
+            this.guna2HtmlLabel15.Location = new System.Drawing.Point(42, 178);
             this.guna2HtmlLabel15.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel15.Name = "guna2HtmlLabel15";
             this.guna2HtmlLabel15.Size = new System.Drawing.Size(100, 37);
@@ -364,11 +349,12 @@ namespace kaenTaVen_V2
             // 
             // guna2HtmlLabel14
             // 
-            this.guna2HtmlLabel14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.guna2HtmlLabel14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel14.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel14.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel14.Location = new System.Drawing.Point(93, 113);
+            this.guna2HtmlLabel14.Location = new System.Drawing.Point(61, 111);
             this.guna2HtmlLabel14.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
             this.guna2HtmlLabel14.Size = new System.Drawing.Size(81, 37);
@@ -377,11 +363,12 @@ namespace kaenTaVen_V2
             // 
             // guna2HtmlLabel13
             // 
-            this.guna2HtmlLabel13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.guna2HtmlLabel13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2HtmlLabel13.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel13.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel13.Location = new System.Drawing.Point(62, 47);
+            this.guna2HtmlLabel13.Location = new System.Drawing.Point(30, 45);
             this.guna2HtmlLabel13.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
             this.guna2HtmlLabel13.Size = new System.Drawing.Size(120, 37);
@@ -459,8 +446,6 @@ namespace kaenTaVen_V2
             // 
             // guna2CirclePictureBox1
             // 
-            this.guna2CirclePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(22, 39);
@@ -474,9 +459,7 @@ namespace kaenTaVen_V2
             // 
             // guna2ShadowPanel1
             // 
-            this.guna2ShadowPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.guna2ShadowPanel1.Controls.Add(this.guna2TextBox1);
             this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel4);
             this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel3);
@@ -484,7 +467,7 @@ namespace kaenTaVen_V2
             this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2ShadowPanel1.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2ShadowPanel1.Controls.Add(this.guna2TextBox2);
-            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.SteelBlue;
             this.guna2ShadowPanel1.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(42, 264);
             this.guna2ShadowPanel1.Margin = new System.Windows.Forms.Padding(5);
@@ -493,7 +476,7 @@ namespace kaenTaVen_V2
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.WhiteSmoke;
             this.guna2ShadowPanel1.ShadowDepth = 80;
             this.guna2ShadowPanel1.ShadowShift = 3;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(727, 263);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(758, 263);
             this.guna2ShadowPanel1.TabIndex = 19;
             // 
             // guna2TextBox1
@@ -518,17 +501,17 @@ namespace kaenTaVen_V2
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(163, 41);
+            this.guna2TextBox1.Size = new System.Drawing.Size(194, 41);
             this.guna2TextBox1.TabIndex = 20;
             // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.White;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Phetsarath OT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(501, 188);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(515, 185);
             this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(37, 31);
@@ -596,16 +579,13 @@ namespace kaenTaVen_V2
             this.guna2TextBox2.PasswordChar = '\0';
             this.guna2TextBox2.PlaceholderText = "";
             this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(163, 41);
+            this.guna2TextBox2.Size = new System.Drawing.Size(194, 41);
             this.guna2TextBox2.TabIndex = 20;
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.AutoScroll = true;
-            this.guna2Panel1.BackColor = System.Drawing.Color.MintCream;
+            this.guna2Panel1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.guna2Panel1.Controls.Add(this.guna2ShadowPanel3);
             this.guna2Panel1.Controls.Add(this.guna2ShadowPanel2);
             this.guna2Panel1.Controls.Add(this.guna2ShadowPanel6);
@@ -617,17 +597,16 @@ namespace kaenTaVen_V2
             this.guna2Panel1.Controls.Add(this.label6);
             this.guna2Panel1.Controls.Add(this.label9);
             this.guna2Panel1.Controls.Add(this.label10);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(5);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(817, 883);
+            this.guna2Panel1.Size = new System.Drawing.Size(994, 923);
             this.guna2Panel1.TabIndex = 1;
             // 
             // guna2ShadowPanel3
             // 
-            this.guna2ShadowPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ShadowPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.guna2ShadowPanel3.Controls.Add(this.guna2TextBox5);
             this.guna2ShadowPanel3.Controls.Add(this.guna2HtmlLabel9);
             this.guna2ShadowPanel3.Controls.Add(this.guna2HtmlLabel10);
@@ -635,7 +614,7 @@ namespace kaenTaVen_V2
             this.guna2ShadowPanel3.Controls.Add(this.guna2HtmlLabel12);
             this.guna2ShadowPanel3.Controls.Add(this.guna2CirclePictureBox3);
             this.guna2ShadowPanel3.Controls.Add(this.guna2TextBox6);
-            this.guna2ShadowPanel3.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel3.FillColor = System.Drawing.Color.SteelBlue;
             this.guna2ShadowPanel3.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ShadowPanel3.Location = new System.Drawing.Point(42, 1317);
             this.guna2ShadowPanel3.Margin = new System.Windows.Forms.Padding(5);
@@ -644,7 +623,7 @@ namespace kaenTaVen_V2
             this.guna2ShadowPanel3.ShadowColor = System.Drawing.Color.WhiteSmoke;
             this.guna2ShadowPanel3.ShadowDepth = 80;
             this.guna2ShadowPanel3.ShadowShift = 3;
-            this.guna2ShadowPanel3.Size = new System.Drawing.Size(727, 263);
+            this.guna2ShadowPanel3.Size = new System.Drawing.Size(758, 263);
             this.guna2ShadowPanel3.TabIndex = 24;
             // 
             // guna2TextBox5
@@ -669,17 +648,17 @@ namespace kaenTaVen_V2
             this.guna2TextBox5.PasswordChar = '\0';
             this.guna2TextBox5.PlaceholderText = "";
             this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.Size = new System.Drawing.Size(163, 41);
+            this.guna2TextBox5.Size = new System.Drawing.Size(194, 41);
             this.guna2TextBox5.TabIndex = 20;
             // 
             // guna2HtmlLabel9
             // 
             this.guna2HtmlLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.White;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Phetsarath OT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel9.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(501, 188);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(519, 186);
             this.guna2HtmlLabel9.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(37, 31);
@@ -727,8 +706,6 @@ namespace kaenTaVen_V2
             // 
             // guna2CirclePictureBox3
             // 
-            this.guna2CirclePictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CirclePictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox3.Image")));
             this.guna2CirclePictureBox3.ImageRotate = 0F;
             this.guna2CirclePictureBox3.Location = new System.Drawing.Point(22, 39);
@@ -762,14 +739,12 @@ namespace kaenTaVen_V2
             this.guna2TextBox6.PasswordChar = '\0';
             this.guna2TextBox6.PlaceholderText = "";
             this.guna2TextBox6.SelectedText = "";
-            this.guna2TextBox6.Size = new System.Drawing.Size(163, 41);
+            this.guna2TextBox6.Size = new System.Drawing.Size(194, 41);
             this.guna2TextBox6.TabIndex = 20;
             // 
             // guna2ShadowPanel2
             // 
-            this.guna2ShadowPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.guna2ShadowPanel2.Controls.Add(this.guna2TextBox3);
             this.guna2ShadowPanel2.Controls.Add(this.guna2HtmlLabel5);
             this.guna2ShadowPanel2.Controls.Add(this.guna2HtmlLabel6);
@@ -777,7 +752,7 @@ namespace kaenTaVen_V2
             this.guna2ShadowPanel2.Controls.Add(this.guna2HtmlLabel8);
             this.guna2ShadowPanel2.Controls.Add(this.guna2CirclePictureBox2);
             this.guna2ShadowPanel2.Controls.Add(this.guna2TextBox4);
-            this.guna2ShadowPanel2.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel2.FillColor = System.Drawing.Color.SteelBlue;
             this.guna2ShadowPanel2.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ShadowPanel2.Location = new System.Drawing.Point(42, 958);
             this.guna2ShadowPanel2.Margin = new System.Windows.Forms.Padding(5);
@@ -786,7 +761,7 @@ namespace kaenTaVen_V2
             this.guna2ShadowPanel2.ShadowColor = System.Drawing.Color.WhiteSmoke;
             this.guna2ShadowPanel2.ShadowDepth = 80;
             this.guna2ShadowPanel2.ShadowShift = 3;
-            this.guna2ShadowPanel2.Size = new System.Drawing.Size(727, 263);
+            this.guna2ShadowPanel2.Size = new System.Drawing.Size(758, 263);
             this.guna2ShadowPanel2.TabIndex = 23;
             // 
             // guna2TextBox3
@@ -811,17 +786,17 @@ namespace kaenTaVen_V2
             this.guna2TextBox3.PasswordChar = '\0';
             this.guna2TextBox3.PlaceholderText = "";
             this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(163, 41);
+            this.guna2TextBox3.Size = new System.Drawing.Size(194, 41);
             this.guna2TextBox3.TabIndex = 20;
             // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.White;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Phetsarath OT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(501, 188);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(519, 186);
             this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(37, 31);
@@ -869,8 +844,6 @@ namespace kaenTaVen_V2
             // 
             // guna2CirclePictureBox2
             // 
-            this.guna2CirclePictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CirclePictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox2.Image")));
             this.guna2CirclePictureBox2.ImageRotate = 0F;
             this.guna2CirclePictureBox2.Location = new System.Drawing.Point(22, 39);
@@ -904,14 +877,12 @@ namespace kaenTaVen_V2
             this.guna2TextBox4.PasswordChar = '\0';
             this.guna2TextBox4.PlaceholderText = "";
             this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.Size = new System.Drawing.Size(163, 41);
+            this.guna2TextBox4.Size = new System.Drawing.Size(194, 41);
             this.guna2TextBox4.TabIndex = 20;
             // 
             // guna2ShadowPanel6
             // 
-            this.guna2ShadowPanel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ShadowPanel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.guna2ShadowPanel6.Controls.Add(this.guna2TextBox12);
             this.guna2ShadowPanel6.Controls.Add(this.guna2HtmlLabel27);
             this.guna2ShadowPanel6.Controls.Add(this.guna2HtmlLabel28);
@@ -919,7 +890,7 @@ namespace kaenTaVen_V2
             this.guna2ShadowPanel6.Controls.Add(this.guna2HtmlLabel30);
             this.guna2ShadowPanel6.Controls.Add(this.guna2CirclePictureBox6);
             this.guna2ShadowPanel6.Controls.Add(this.guna2TextBox13);
-            this.guna2ShadowPanel6.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel6.FillColor = System.Drawing.Color.SteelBlue;
             this.guna2ShadowPanel6.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ShadowPanel6.Location = new System.Drawing.Point(42, 621);
             this.guna2ShadowPanel6.Margin = new System.Windows.Forms.Padding(5);
@@ -928,7 +899,7 @@ namespace kaenTaVen_V2
             this.guna2ShadowPanel6.ShadowColor = System.Drawing.Color.WhiteSmoke;
             this.guna2ShadowPanel6.ShadowDepth = 80;
             this.guna2ShadowPanel6.ShadowShift = 3;
-            this.guna2ShadowPanel6.Size = new System.Drawing.Size(727, 263);
+            this.guna2ShadowPanel6.Size = new System.Drawing.Size(758, 263);
             this.guna2ShadowPanel6.TabIndex = 21;
             // 
             // guna2TextBox12
@@ -953,17 +924,17 @@ namespace kaenTaVen_V2
             this.guna2TextBox12.PasswordChar = '\0';
             this.guna2TextBox12.PlaceholderText = "";
             this.guna2TextBox12.SelectedText = "";
-            this.guna2TextBox12.Size = new System.Drawing.Size(163, 41);
+            this.guna2TextBox12.Size = new System.Drawing.Size(194, 41);
             this.guna2TextBox12.TabIndex = 20;
             // 
             // guna2HtmlLabel27
             // 
             this.guna2HtmlLabel27.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2HtmlLabel27.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel27.BackColor = System.Drawing.Color.White;
             this.guna2HtmlLabel27.Font = new System.Drawing.Font("Phetsarath OT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel27.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.guna2HtmlLabel27.Location = new System.Drawing.Point(501, 188);
+            this.guna2HtmlLabel27.Location = new System.Drawing.Point(514, 186);
             this.guna2HtmlLabel27.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel27.Name = "guna2HtmlLabel27";
             this.guna2HtmlLabel27.Size = new System.Drawing.Size(37, 31);
@@ -1011,8 +982,6 @@ namespace kaenTaVen_V2
             // 
             // guna2CirclePictureBox6
             // 
-            this.guna2CirclePictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CirclePictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox6.Image")));
             this.guna2CirclePictureBox6.ImageRotate = 0F;
             this.guna2CirclePictureBox6.Location = new System.Drawing.Point(22, 39);
@@ -1046,7 +1015,7 @@ namespace kaenTaVen_V2
             this.guna2TextBox13.PasswordChar = '\0';
             this.guna2TextBox13.PlaceholderText = "";
             this.guna2TextBox13.SelectedText = "";
-            this.guna2TextBox13.Size = new System.Drawing.Size(163, 41);
+            this.guna2TextBox13.Size = new System.Drawing.Size(194, 41);
             this.guna2TextBox13.TabIndex = 20;
             // 
             // iconButton4
@@ -1060,10 +1029,10 @@ namespace kaenTaVen_V2
             this.iconButton4.IconColor = System.Drawing.Color.Black;
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 20;
-            this.iconButton4.Location = new System.Drawing.Point(702, 64);
+            this.iconButton4.Location = new System.Drawing.Point(869, 60);
             this.iconButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(30, 30);
+            this.iconButton4.Size = new System.Drawing.Size(64, 30);
             this.iconButton4.TabIndex = 22;
             this.iconButton4.UseVisualStyleBackColor = false;
             // 
@@ -1089,7 +1058,7 @@ namespace kaenTaVen_V2
             this.guna2TextBox11.PasswordChar = '\0';
             this.guna2TextBox11.PlaceholderText = "";
             this.guna2TextBox11.SelectedText = "";
-            this.guna2TextBox11.Size = new System.Drawing.Size(575, 50);
+            this.guna2TextBox11.Size = new System.Drawing.Size(752, 50);
             this.guna2TextBox11.TabIndex = 21;
             // 
             // FormOrders
@@ -1105,12 +1074,9 @@ namespace kaenTaVen_V2
             this.Controls.Add(this.lblTitleChildForm);
             this.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.MaximumSize = new System.Drawing.Size(1737, 979);
             this.Name = "FormOrders";
             this.Text = "FormOrders";
             this.Load += new System.EventHandler(this.FormOrders_Load_1);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
@@ -1138,7 +1104,7 @@ namespace kaenTaVen_V2
         #endregion
 
         private System.Windows.Forms.Label lblTitleChildForm;
-        private System.Windows.Forms.GroupBox groupBox3;
+      
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.CheckBox checkBox2;
