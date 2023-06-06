@@ -16,5 +16,10 @@ namespace kaenTaVen_V2
         {
             InitializeComponent();
         }
+
+        private void FormCustomers_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -149,7 +149,7 @@ namespace kaenTaVen_V2
             this.textBox3.Location = new System.Drawing.Point(252, 142);
             this.textBox3.Margin = new System.Windows.Forms.Padding(5);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(240, 39);
+            this.textBox3.Size = new System.Drawing.Size(240, 43);
             this.textBox3.TabIndex = 2;
             // 
             // checkBox2
@@ -158,7 +158,7 @@ namespace kaenTaVen_V2
             this.checkBox2.Location = new System.Drawing.Point(70, 220);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(5);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(121, 35);
+            this.checkBox2.Size = new System.Drawing.Size(146, 39);
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "Tit nee dr";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -169,7 +169,7 @@ namespace kaenTaVen_V2
             this.checkBox1.Location = new System.Drawing.Point(70, 63);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(5);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(121, 35);
+            this.checkBox1.Size = new System.Drawing.Size(146, 39);
             this.checkBox1.TabIndex = 1;
             this.checkBox1.Text = "Tit nee dr";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -180,7 +180,7 @@ namespace kaenTaVen_V2
             this.label15.Location = new System.Drawing.Point(9, 310);
             this.label15.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(88, 31);
+            this.label15.Size = new System.Drawing.Size(107, 35);
             this.label15.TabIndex = 0;
             this.label15.Text = " Amount";
             // 
@@ -190,38 +190,45 @@ namespace kaenTaVen_V2
             this.label14.Location = new System.Drawing.Point(23, 142);
             this.label14.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 31);
+            this.label14.Size = new System.Drawing.Size(99, 35);
             this.label14.TabIndex = 0;
             this.label14.Text = "Amount";
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(322, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 31);
+            this.label2.Size = new System.Drawing.Size(125, 35);
             this.label2.TabIndex = 5;
             this.label2.Text = "ລາຍການສັ່ງຊື້";
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel1.Controls.Add(this.guna2DataGridView1);
             this.panel1.Controls.Add(this.iconButton3);
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(908, 0);
+            this.panel1.Location = new System.Drawing.Point(823, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(807, 883);
+            this.panel1.Size = new System.Drawing.Size(892, 883);
             this.panel1.TabIndex = 14;
             // 
             // guna2DataGridView1
             // 
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.guna2DataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -241,12 +248,12 @@ namespace kaenTaVen_V2
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(15, 53);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(34, 53);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 62;
             this.guna2DataGridView1.RowTemplate.Height = 28;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(761, 506);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(846, 506);
             this.guna2DataGridView1.TabIndex = 10;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -285,6 +292,8 @@ namespace kaenTaVen_V2
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.groupBox1.Controls.Add(this.guna2HtmlLabel17);
             this.groupBox1.Controls.Add(this.guna2HtmlLabel16);
@@ -297,7 +306,7 @@ namespace kaenTaVen_V2
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox1.Size = new System.Drawing.Size(761, 247);
+            this.groupBox1.Size = new System.Drawing.Size(846, 247);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
@@ -310,7 +319,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel17.Location = new System.Drawing.Point(201, 47);
             this.guna2HtmlLabel17.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel17.Name = "guna2HtmlLabel17";
-            this.guna2HtmlLabel17.Size = new System.Drawing.Size(283, 33);
+            this.guna2HtmlLabel17.Size = new System.Drawing.Size(323, 37);
             this.guna2HtmlLabel17.TabIndex = 28;
             this.guna2HtmlLabel17.Text = "........................................";
             // 
@@ -323,7 +332,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel16.Location = new System.Drawing.Point(201, 120);
             this.guna2HtmlLabel16.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel16.Name = "guna2HtmlLabel16";
-            this.guna2HtmlLabel16.Size = new System.Drawing.Size(283, 33);
+            this.guna2HtmlLabel16.Size = new System.Drawing.Size(323, 37);
             this.guna2HtmlLabel16.TabIndex = 27;
             this.guna2HtmlLabel16.Text = "........................................";
             // 
@@ -336,7 +345,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel18.Location = new System.Drawing.Point(201, 180);
             this.guna2HtmlLabel18.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel18.Name = "guna2HtmlLabel18";
-            this.guna2HtmlLabel18.Size = new System.Drawing.Size(283, 33);
+            this.guna2HtmlLabel18.Size = new System.Drawing.Size(323, 37);
             this.guna2HtmlLabel18.TabIndex = 26;
             this.guna2HtmlLabel18.Text = "........................................";
             // 
@@ -349,7 +358,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel15.Location = new System.Drawing.Point(74, 180);
             this.guna2HtmlLabel15.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel15.Name = "guna2HtmlLabel15";
-            this.guna2HtmlLabel15.Size = new System.Drawing.Size(89, 33);
+            this.guna2HtmlLabel15.Size = new System.Drawing.Size(100, 37);
             this.guna2HtmlLabel15.TabIndex = 23;
             this.guna2HtmlLabel15.Text = "ຍອດລວມ:";
             // 
@@ -362,7 +371,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel14.Location = new System.Drawing.Point(93, 113);
             this.guna2HtmlLabel14.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel14.Name = "guna2HtmlLabel14";
-            this.guna2HtmlLabel14.Size = new System.Drawing.Size(70, 33);
+            this.guna2HtmlLabel14.Size = new System.Drawing.Size(81, 37);
             this.guna2HtmlLabel14.TabIndex = 22;
             this.guna2HtmlLabel14.Text = "ຈຳນວນ:";
             // 
@@ -375,7 +384,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel13.Location = new System.Drawing.Point(62, 47);
             this.guna2HtmlLabel13.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            this.guna2HtmlLabel13.Size = new System.Drawing.Size(101, 33);
+            this.guna2HtmlLabel13.Size = new System.Drawing.Size(120, 37);
             this.guna2HtmlLabel13.TabIndex = 21;
             this.guna2HtmlLabel13.Text = "ລາຄາຕໍ່ກິໂລ:";
             // 
@@ -394,7 +403,7 @@ namespace kaenTaVen_V2
             this.label13.Location = new System.Drawing.Point(257, 1706);
             this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(62, 31);
+            this.label13.Size = new System.Drawing.Size(78, 35);
             this.label13.TabIndex = 10;
             this.label13.Text = "label1";
             // 
@@ -404,7 +413,7 @@ namespace kaenTaVen_V2
             this.label10.Location = new System.Drawing.Point(36, 168);
             this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(106, 31);
+            this.label10.Size = new System.Drawing.Size(121, 35);
             this.label10.TabIndex = 12;
             this.label10.Text = "ລະຫັດລູກຄ້າ";
             // 
@@ -414,7 +423,7 @@ namespace kaenTaVen_V2
             this.label1.Location = new System.Drawing.Point(36, 72);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 31);
+            this.label1.Size = new System.Drawing.Size(155, 35);
             this.label1.TabIndex = 16;
             this.label1.Text = "ຄົ້ນຫາໂດຍເບີໂທ";
             // 
@@ -424,7 +433,7 @@ namespace kaenTaVen_V2
             this.label9.Location = new System.Drawing.Point(188, 168);
             this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(120, 31);
+            this.label9.Size = new System.Drawing.Size(144, 35);
             this.label9.TabIndex = 13;
             this.label9.Text = "result cusID";
             // 
@@ -434,7 +443,7 @@ namespace kaenTaVen_V2
             this.label6.Location = new System.Drawing.Point(593, 168);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 31);
+            this.label6.Size = new System.Drawing.Size(198, 35);
             this.label6.TabIndex = 15;
             this.label6.Text = "Result CusName";
             // 
@@ -444,7 +453,7 @@ namespace kaenTaVen_V2
             this.label4.Location = new System.Drawing.Point(375, 168);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 31);
+            this.label4.Size = new System.Drawing.Size(81, 35);
             this.label4.TabIndex = 14;
             this.label4.Text = "ຊື່ລູກຄ້າ";
             // 
@@ -465,6 +474,8 @@ namespace kaenTaVen_V2
             // 
             // guna2ShadowPanel1
             // 
+            this.guna2ShadowPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel1.Controls.Add(this.guna2TextBox1);
             this.guna2ShadowPanel1.Controls.Add(this.guna2HtmlLabel4);
@@ -520,7 +531,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel4.Location = new System.Drawing.Point(501, 188);
             this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(32, 28);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(37, 31);
             this.guna2HtmlLabel4.TabIndex = 19;
             this.guna2HtmlLabel4.Text = "KG.";
             // 
@@ -533,7 +544,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel3.Location = new System.Drawing.Point(265, 189);
             this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(70, 33);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(81, 37);
             this.guna2HtmlLabel3.TabIndex = 19;
             this.guna2HtmlLabel3.Text = "ຈຳນວນ:";
             // 
@@ -546,7 +557,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(278, 106);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(52, 33);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(62, 37);
             this.guna2HtmlLabel2.TabIndex = 19;
             this.guna2HtmlLabel2.Text = "ລາຄາ:";
             // 
@@ -559,7 +570,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(265, 39);
             this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(255, 38);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(294, 43);
             this.guna2HtmlLabel1.TabIndex = 19;
             this.guna2HtmlLabel1.Text = "ເມັດພັນຕົ້ນອ່ອນດອກຕາເວັນ";
             // 
@@ -590,7 +601,11 @@ namespace kaenTaVen_V2
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.AutoScroll = true;
+            this.guna2Panel1.BackColor = System.Drawing.Color.MintCream;
             this.guna2Panel1.Controls.Add(this.guna2ShadowPanel3);
             this.guna2Panel1.Controls.Add(this.guna2ShadowPanel2);
             this.guna2Panel1.Controls.Add(this.guna2ShadowPanel6);
@@ -602,15 +617,16 @@ namespace kaenTaVen_V2
             this.guna2Panel1.Controls.Add(this.label6);
             this.guna2Panel1.Controls.Add(this.label9);
             this.guna2Panel1.Controls.Add(this.label10);
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(5);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(810, 883);
-            this.guna2Panel1.TabIndex = 20;
+            this.guna2Panel1.Size = new System.Drawing.Size(817, 883);
+            this.guna2Panel1.TabIndex = 1;
             // 
             // guna2ShadowPanel3
             // 
+            this.guna2ShadowPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ShadowPanel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel3.Controls.Add(this.guna2TextBox5);
             this.guna2ShadowPanel3.Controls.Add(this.guna2HtmlLabel9);
@@ -666,7 +682,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel9.Location = new System.Drawing.Point(501, 188);
             this.guna2HtmlLabel9.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(32, 28);
+            this.guna2HtmlLabel9.Size = new System.Drawing.Size(37, 31);
             this.guna2HtmlLabel9.TabIndex = 19;
             this.guna2HtmlLabel9.Text = "KG.";
             // 
@@ -679,7 +695,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel10.Location = new System.Drawing.Point(265, 189);
             this.guna2HtmlLabel10.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(70, 33);
+            this.guna2HtmlLabel10.Size = new System.Drawing.Size(81, 37);
             this.guna2HtmlLabel10.TabIndex = 19;
             this.guna2HtmlLabel10.Text = "ຈຳນວນ:";
             // 
@@ -692,7 +708,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel11.Location = new System.Drawing.Point(278, 106);
             this.guna2HtmlLabel11.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            this.guna2HtmlLabel11.Size = new System.Drawing.Size(52, 33);
+            this.guna2HtmlLabel11.Size = new System.Drawing.Size(62, 37);
             this.guna2HtmlLabel11.TabIndex = 19;
             this.guna2HtmlLabel11.Text = "ລາຄາ:";
             // 
@@ -705,7 +721,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel12.Location = new System.Drawing.Point(265, 39);
             this.guna2HtmlLabel12.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            this.guna2HtmlLabel12.Size = new System.Drawing.Size(255, 38);
+            this.guna2HtmlLabel12.Size = new System.Drawing.Size(294, 43);
             this.guna2HtmlLabel12.TabIndex = 19;
             this.guna2HtmlLabel12.Text = "ເມັດພັນຕົ້ນອ່ອນດອກຕາເວັນ";
             // 
@@ -751,6 +767,8 @@ namespace kaenTaVen_V2
             // 
             // guna2ShadowPanel2
             // 
+            this.guna2ShadowPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ShadowPanel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel2.Controls.Add(this.guna2TextBox3);
             this.guna2ShadowPanel2.Controls.Add(this.guna2HtmlLabel5);
@@ -806,7 +824,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(501, 188);
             this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(32, 28);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(37, 31);
             this.guna2HtmlLabel5.TabIndex = 19;
             this.guna2HtmlLabel5.Text = "KG.";
             // 
@@ -819,7 +837,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(265, 189);
             this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(70, 33);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(81, 37);
             this.guna2HtmlLabel6.TabIndex = 19;
             this.guna2HtmlLabel6.Text = "ຈຳນວນ:";
             // 
@@ -832,7 +850,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(278, 106);
             this.guna2HtmlLabel7.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(52, 33);
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(62, 37);
             this.guna2HtmlLabel7.TabIndex = 19;
             this.guna2HtmlLabel7.Text = "ລາຄາ:";
             // 
@@ -845,7 +863,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel8.Location = new System.Drawing.Point(265, 39);
             this.guna2HtmlLabel8.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(255, 38);
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(294, 43);
             this.guna2HtmlLabel8.TabIndex = 19;
             this.guna2HtmlLabel8.Text = "ເມັດພັນຕົ້ນອ່ອນດອກຕາເວັນ";
             // 
@@ -891,6 +909,8 @@ namespace kaenTaVen_V2
             // 
             // guna2ShadowPanel6
             // 
+            this.guna2ShadowPanel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ShadowPanel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel6.Controls.Add(this.guna2TextBox12);
             this.guna2ShadowPanel6.Controls.Add(this.guna2HtmlLabel27);
@@ -946,7 +966,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel27.Location = new System.Drawing.Point(501, 188);
             this.guna2HtmlLabel27.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel27.Name = "guna2HtmlLabel27";
-            this.guna2HtmlLabel27.Size = new System.Drawing.Size(32, 28);
+            this.guna2HtmlLabel27.Size = new System.Drawing.Size(37, 31);
             this.guna2HtmlLabel27.TabIndex = 19;
             this.guna2HtmlLabel27.Text = "KG.";
             // 
@@ -959,7 +979,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel28.Location = new System.Drawing.Point(265, 189);
             this.guna2HtmlLabel28.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel28.Name = "guna2HtmlLabel28";
-            this.guna2HtmlLabel28.Size = new System.Drawing.Size(70, 33);
+            this.guna2HtmlLabel28.Size = new System.Drawing.Size(81, 37);
             this.guna2HtmlLabel28.TabIndex = 19;
             this.guna2HtmlLabel28.Text = "ຈຳນວນ:";
             // 
@@ -972,7 +992,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel29.Location = new System.Drawing.Point(278, 106);
             this.guna2HtmlLabel29.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel29.Name = "guna2HtmlLabel29";
-            this.guna2HtmlLabel29.Size = new System.Drawing.Size(52, 33);
+            this.guna2HtmlLabel29.Size = new System.Drawing.Size(62, 37);
             this.guna2HtmlLabel29.TabIndex = 19;
             this.guna2HtmlLabel29.Text = "ລາຄາ:";
             // 
@@ -985,7 +1005,7 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel30.Location = new System.Drawing.Point(265, 39);
             this.guna2HtmlLabel30.Margin = new System.Windows.Forms.Padding(5);
             this.guna2HtmlLabel30.Name = "guna2HtmlLabel30";
-            this.guna2HtmlLabel30.Size = new System.Drawing.Size(255, 38);
+            this.guna2HtmlLabel30.Size = new System.Drawing.Size(294, 43);
             this.guna2HtmlLabel30.TabIndex = 19;
             this.guna2HtmlLabel30.Text = "ເມັດພັນຕົ້ນອ່ອນດອກຕາເວັນ";
             // 
@@ -1031,6 +1051,8 @@ namespace kaenTaVen_V2
             // 
             // iconButton4
             // 
+            this.iconButton4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.iconButton4.BackColor = System.Drawing.Color.White;
             this.iconButton4.FlatAppearance.BorderSize = 0;
             this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1047,6 +1069,8 @@ namespace kaenTaVen_V2
             // 
             // guna2TextBox11
             // 
+            this.guna2TextBox11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2TextBox11.BorderColor = System.Drawing.Color.Teal;
             this.guna2TextBox11.BorderRadius = 10;
             this.guna2TextBox11.BorderThickness = 2;
@@ -1070,10 +1094,10 @@ namespace kaenTaVen_V2
             // 
             // FormOrders
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 35F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.ClientSize = new System.Drawing.Size(1715, 883);
+            this.ClientSize = new System.Drawing.Size(1715, 923);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.textBox2);
@@ -1081,7 +1105,7 @@ namespace kaenTaVen_V2
             this.Controls.Add(this.lblTitleChildForm);
             this.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.MaximumSize = new System.Drawing.Size(1737, 939);
+            this.MaximumSize = new System.Drawing.Size(1737, 979);
             this.Name = "FormOrders";
             this.Text = "FormOrders";
             this.Load += new System.EventHandler(this.FormOrders_Load_1);

@@ -15,7 +15,8 @@ namespace kaenTaVen_V2
         public FormOrders()
         {
             InitializeComponent();
-          
+   
+
         }
 
         private void FormOrders_Load(object sender, EventArgs e)
