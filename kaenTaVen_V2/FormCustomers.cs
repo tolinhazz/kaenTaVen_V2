@@ -21,5 +21,10 @@ namespace kaenTaVen_V2
         {
 
         }
+
+        private void guna2ShadowPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
