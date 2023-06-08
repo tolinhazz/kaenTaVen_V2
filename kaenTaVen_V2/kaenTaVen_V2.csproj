@@ -59,6 +59,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Addcustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addcustomer.Designer.cs">
+      <DependentUpon>Addcustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Expense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Addcustomer.resx">
+      <DependentUpon>Addcustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Expense.resx">
       <DependentUpon>Expense.cs</DependentUpon>
     </EmbeddedResource>
