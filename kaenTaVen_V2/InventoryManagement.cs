@@ -79,7 +79,7 @@ namespace kaenTaVen_V2
 
         private void btnExpense_Click(object sender, EventArgs e)
         {
-            Form1.instance.OpenChildForm(new FormExpense());
+          
         }
 
         private void panelDesktop_Paint(object sender, PaintEventArgs e)
