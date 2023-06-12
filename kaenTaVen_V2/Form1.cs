@@ -192,5 +192,10 @@ namespace kaenTaVen_V2
         {
 
         }
+
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

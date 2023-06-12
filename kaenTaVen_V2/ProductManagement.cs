@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace kaenTaVen_V2
 {
-    public partial class FormInventoryBtn : Form
+    public partial class ProductManagement : Form
     {
-        public FormInventoryBtn()
+        public ProductManagement()
         {
             InitializeComponent();
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void guna2ShadowPanel1_Paint(object sender, PaintEventArgs e)
         {
-            Form1.instance.OpenChildForm(new FormInventory());
+
         }
 
-        private void FormInventoryBtn_Load(object sender, EventArgs e)
+        private void ProductManagement_Load(object sender, EventArgs e)
         {
 
         }

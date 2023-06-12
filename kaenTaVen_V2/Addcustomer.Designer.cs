@@ -163,7 +163,7 @@
             this.iconButtonClear.IconChar = FontAwesome.Sharp.IconChar.Broom;
             this.iconButtonClear.IconColor = System.Drawing.Color.Black;
             this.iconButtonClear.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButtonClear.Location = new System.Drawing.Point(210, 432);
+            this.iconButtonClear.Location = new System.Drawing.Point(754, 417);
             this.iconButtonClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButtonClear.Name = "iconButtonClear";
             this.iconButtonClear.Size = new System.Drawing.Size(90, 88);
@@ -176,7 +176,7 @@
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.iconButton3.IconColor = System.Drawing.Color.Black;
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.Location = new System.Drawing.Point(113, 432);
+            this.iconButton3.Location = new System.Drawing.Point(657, 417);
             this.iconButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(90, 88);
@@ -189,7 +189,7 @@
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.PenToSquare;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.Location = new System.Drawing.Point(16, 432);
+            this.iconButton2.Location = new System.Drawing.Point(560, 417);
             this.iconButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(90, 88);
@@ -212,7 +212,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Name = "Addcustomer";
-            this.Text = "Addcustomer";
+            this.Text = " ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
