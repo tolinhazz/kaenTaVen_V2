@@ -117,14 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="guna2Panel1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="guna2TileButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnStockManage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACUHSURBVHhe7d1/
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAACUHSURBVHhe7d1/
         8GV3fddxst/9kWWzm91svpsFNt1s2OYH5YfboIIQYXVK28lArQ1opI3QlmoGpyl/WExNnCgpUtKEkiiF
         DRgSCGmw7RqipPwqY1XQCEwG0JBqZqxlsNRhiuNoGbUcz921lYb3fr/n3ve993M+9/N4zTz+Kv3mfu85
         OfeZbO45TzEzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMxu2Lb1X9r7Ye6j3/J6ZmZmt6Lb3ru39
@@ -286,10 +283,10 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-  <data name="guna2TileButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnProManage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADveSURBVHhe7Z0J
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAADveSURBVHhe7Z0J
         VBzXme+9TlY7iRNnHWcSOzPJJJksTl5mMvNmkrzJJJNkPG85QwSSLC9JZFsSi+Q9i0Nenm1oyZI3rdYK
         dIPwFlu24x2xNAjE0o0saxcCmk2sDUiyJEO/KrhYuLjQ1U0vVbd+v3N+JyfHkuimb33fnyq+e88DAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA

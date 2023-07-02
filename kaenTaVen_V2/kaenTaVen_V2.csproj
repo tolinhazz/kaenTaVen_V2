@@ -59,12 +59,37 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Active.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Active.Designer.cs">
+      <DependentUpon>Active.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Debt_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Debt_Detail.Designer.cs">
+      <DependentUpon>Debt_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Deliver_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order_Deliver_Detail.Designer.cs">
+      <DependentUpon>Order_Deliver_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order_Detail.Designer.cs">
+      <DependentUpon>Order_Detail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Addcustomer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Addcustomer.Designer.cs">
       <DependentUpon>Addcustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Connector.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +132,11 @@
     <Compile Include="FormSetting.Designer.cs">
       <DependentUpon>FormSetting.cs</DependentUpon>
     </Compile>
+    <Compile Include="kaenTaVenDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>kaenTaVenDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ProductManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +151,18 @@
     <Compile Include="StockManagement.Designer.cs">
       <DependentUpon>StockManagement.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Active.resx">
+      <DependentUpon>Active.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Debt_Detail.resx">
+      <DependentUpon>Debt_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order_Deliver_Detail.resx">
+      <DependentUpon>Order_Deliver_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order_Detail.resx">
+      <DependentUpon>Order_Detail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Addcustomer.resx">
       <DependentUpon>Addcustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +203,17 @@
     <EmbeddedResource Include="StockManagement.resx">
       <DependentUpon>StockManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="kaenTaVenDataSet.xsc">
+      <DependentUpon>kaenTaVenDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="kaenTaVenDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>kaenTaVenDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="kaenTaVenDataSet.xss">
+      <DependentUpon>kaenTaVenDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

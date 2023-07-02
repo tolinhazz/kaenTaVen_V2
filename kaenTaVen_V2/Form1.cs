@@ -42,7 +42,7 @@ namespace kaenTaVen_V2
         // Structs
         private struct RGBColors
         {
-            public static Color color1 = Color.FromArgb(0, 255, 185);
+            public static Color color1 = Color.FromArgb(59, 177, 67);
             public static Color color2 = Color.FromArgb(38, 166, 91);
         }
 
@@ -196,6 +196,12 @@ namespace kaenTaVen_V2
         private void panelDesktop_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new Order_Detail());
         }
     }
 }
