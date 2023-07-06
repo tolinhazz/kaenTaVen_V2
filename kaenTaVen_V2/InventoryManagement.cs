@@ -269,7 +269,7 @@ namespace kaenTaVen_V2
             dr.Close();
             //====================================Insert Data to tbPurchaseOrder=============================================
 
-            cmd = new SqlCommand("Insert into tbPurchaseOrder values(@Proname,@Quan, @total,@SupName,@ExchangerName,CURRENT_TIMESTAMP, @PayType,@PayStatus,@ReceivedStatus, @Express_name,@Express_fee)", con.conder);
+            cmd = new SqlCommand("Insert into tbPurchaseOrder values(@Proname,@Quan, @total,@SupName,@ExchangerName,CURRENT_TIMESTAMP, @PayType,@PayStatus,@ReceivedStatus, @Express_name,null)", con.conder);
             cmd.Parameters.AddWithValue("@Proname", productname);
             cmd.Parameters.AddWithValue("@Quan", txtquan.Text);
             cmd.Parameters.AddWithValue("@total", txtcost.Text);
@@ -279,7 +279,7 @@ namespace kaenTaVen_V2
             cmd.Parameters.AddWithValue("@PayStatus", paymentStatus);
             cmd.Parameters.AddWithValue("@ReceivedStatus", receievStatus);
             cmd.Parameters.AddWithValue("@Express_name", express);
-            cmd.Parameters.AddWithValue("@Express_fee", txtExpressFee.Text);
+        
 
             if (cmd.ExecuteNonQuery() == 1)
             {
@@ -412,7 +412,7 @@ namespace kaenTaVen_V2
         public void showStock()
         {
 
-            string Stock_quantity, product_id;
+            string  product_id;
             ///================================== Find ProductID ==============================================
 
             string STR8 = "select product_id from tbProduct where product_name = @name";
@@ -449,6 +449,7 @@ namespace kaenTaVen_V2
             showStock();
             lblStock.Visible = true;
             lblStockQuan.Visible = true;
+            
 
             btnConvfirm.Text = "ອັບເດດການສັ່ງຊື້";
 
@@ -570,8 +571,9 @@ namespace kaenTaVen_V2
 
 
             guna2DataGridView1.CurrentRow.Cells[9].Value = "ຮັບສິນຄ້າແລ້ວ";
-            cmd = new SqlCommand("update tbPurchaseOrder set received_status = 3 where purchase_order_id = @order_id ", con.conder);
+            cmd = new SqlCommand("update tbPurchaseOrder set received_status = 3, express_fee = @fee where purchase_order_id = @order_id ", con.conder);
             cmd.Parameters.AddWithValue("@order_id", guna2DataGridView1.CurrentRow.Cells[0].Value.ToString());
+            cmd.Parameters.AddWithValue("@fee", txtExpressFee.Text);
             cmd.ExecuteNonQuery();
 
             int selectedRowIndex = guna2DataGridView1.SelectedRows.Count > 0 ? guna2DataGridView1.SelectedRows[0].Index : -1;
@@ -606,6 +608,7 @@ namespace kaenTaVen_V2
 
                 cmd = new SqlCommand("Insert into purchase_bill values(@Purchase_order_id, CURRENT_TIMESTAMP)", con.conder);
                 cmd.Parameters.AddWithValue("@Purchase_order_id", guna2DataGridView1.Rows[selectedRowIndex].Cells[0].Value.ToString());
+                
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("ສຳເລັດການສັ່ງຊື້");
@@ -723,10 +726,34 @@ namespace kaenTaVen_V2
             btnConvfirm.Text = "ຢືນຢັນການສັ່ງ";
             lblStock.Visible= false;
             lblStockQuan.Visible= false;
+            txtExpressFee.Text = "";
 
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void cbProName_TextChanged(object sender, EventArgs e)
+        {
+            if(cbProName.Text != "")
+            {
+                showStock();
+            }
+        }
+
+        private void cbProName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbProName.Text != "")
+            {
+                lblStockQuan.Visible = true;
+                lblStock.Visible = true;
+                showStock();
+            }
+        }
+
+        private void lblStockQuan_Click(object sender, EventArgs e)
         {
 
         }
@@ -776,7 +803,17 @@ namespace kaenTaVen_V2
                     }
                     if (rdbDeliverCheck.Checked == true)
                     {
-                        updatePurchaseReceived();
+                        if (txtExpressFee.Text != "")
+                        {
+
+
+                            updatePurchaseReceived();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("ຕື່ມຂໍ້ມູນຄ່າຂົນສົ່ງກ່ອນ");
+                        }
                     }
                     else if (rdbDeliverCheck.Checked == false)
                     {

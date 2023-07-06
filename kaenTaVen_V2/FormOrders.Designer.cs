@@ -109,20 +109,31 @@ namespace kaenTaVen_V2
             this.guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblLaiyNrk = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ShadowPanel4 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.lblDeliverChannelAlert = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbReceivedChannel = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lblPayTypeAlert = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtExpressDes = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lbldestination = new System.Windows.Forms.Label();
+            this.cbPayType = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.DeliverCheck = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.PayCheck = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
             this.lblInvNum = new System.Windows.Forms.Label();
             this.btnTotal = new Guna.UI2.WinForms.Guna2Button();
             this.txtTotal = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtQuanUnit = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtExpress = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtExpressOrig = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFirstInstallment = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPriceUnit = new Guna.UI2.WinForms.Guna2TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.DebtCheck = new Guna.UI2.WinForms.Guna2CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblSumlah = new System.Windows.Forms.Label();
+            this.lblOrigin = new System.Windows.Forms.Label();
             this.lblJaiyKrn = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -131,10 +142,10 @@ namespace kaenTaVen_V2
             this.Pro_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pro_quan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pro_total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PayCheck = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.DeliverCheck = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.cbPayType = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblfirstInstallTypeAlert = new System.Windows.Forms.Label();
+            this.cbFirstInstallType = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lblFirstInstallType = new System.Windows.Forms.Label();
+            this.lblfirstInstallAlert = new System.Windows.Forms.Label();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VenlaiyPic)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -317,10 +328,13 @@ namespace kaenTaVen_V2
             // VenlaiyPic
             // 
             this.VenlaiyPic.BackColor = System.Drawing.Color.Transparent;
+            this.VenlaiyPic.BorderRadius = 10;
+            this.VenlaiyPic.FillColor = System.Drawing.Color.Black;
+            this.VenlaiyPic.Image = ((System.Drawing.Image)(resources.GetObject("VenlaiyPic.Image")));
             this.VenlaiyPic.ImageRotate = 0F;
-            this.VenlaiyPic.Location = new System.Drawing.Point(41, 52);
+            this.VenlaiyPic.Location = new System.Drawing.Point(20, 18);
             this.VenlaiyPic.Name = "VenlaiyPic";
-            this.VenlaiyPic.Size = new System.Drawing.Size(166, 154);
+            this.VenlaiyPic.Size = new System.Drawing.Size(225, 227);
             this.VenlaiyPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.VenlaiyPic.TabIndex = 23;
             this.VenlaiyPic.TabStop = false;
@@ -809,9 +823,9 @@ namespace kaenTaVen_V2
             this.LunTaoPic.BackColor = System.Drawing.Color.Transparent;
             this.LunTaoPic.Image = ((System.Drawing.Image)(resources.GetObject("LunTaoPic.Image")));
             this.LunTaoPic.ImageRotate = 0F;
-            this.LunTaoPic.Location = new System.Drawing.Point(39, 63);
+            this.LunTaoPic.Location = new System.Drawing.Point(18, 17);
             this.LunTaoPic.Name = "LunTaoPic";
-            this.LunTaoPic.Size = new System.Drawing.Size(166, 154);
+            this.LunTaoPic.Size = new System.Drawing.Size(227, 240);
             this.LunTaoPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.LunTaoPic.TabIndex = 23;
             this.LunTaoPic.TabStop = false;
@@ -1353,6 +1367,17 @@ namespace kaenTaVen_V2
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ShadowPanel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel4.Controls.Add(this.lblfirstInstallAlert);
+            this.guna2ShadowPanel4.Controls.Add(this.lblfirstInstallTypeAlert);
+            this.guna2ShadowPanel4.Controls.Add(this.cbFirstInstallType);
+            this.guna2ShadowPanel4.Controls.Add(this.lblFirstInstallType);
+            this.guna2ShadowPanel4.Controls.Add(this.lblDeliverChannelAlert);
+            this.guna2ShadowPanel4.Controls.Add(this.label11);
+            this.guna2ShadowPanel4.Controls.Add(this.cbReceivedChannel);
+            this.guna2ShadowPanel4.Controls.Add(this.lblPayTypeAlert);
+            this.guna2ShadowPanel4.Controls.Add(this.label7);
+            this.guna2ShadowPanel4.Controls.Add(this.txtExpressDes);
+            this.guna2ShadowPanel4.Controls.Add(this.lbldestination);
             this.guna2ShadowPanel4.Controls.Add(this.cbPayType);
             this.guna2ShadowPanel4.Controls.Add(this.DeliverCheck);
             this.guna2ShadowPanel4.Controls.Add(this.PayCheck);
@@ -1362,15 +1387,15 @@ namespace kaenTaVen_V2
             this.guna2ShadowPanel4.Controls.Add(this.btnTotal);
             this.guna2ShadowPanel4.Controls.Add(this.txtTotal);
             this.guna2ShadowPanel4.Controls.Add(this.txtQuanUnit);
-            this.guna2ShadowPanel4.Controls.Add(this.txtExpress);
+            this.guna2ShadowPanel4.Controls.Add(this.txtExpressOrig);
             this.guna2ShadowPanel4.Controls.Add(this.txtFirstInstallment);
             this.guna2ShadowPanel4.Controls.Add(this.txtPriceUnit);
             this.guna2ShadowPanel4.Controls.Add(this.label12);
             this.guna2ShadowPanel4.Controls.Add(this.DebtCheck);
             this.guna2ShadowPanel4.Controls.Add(this.label8);
             this.guna2ShadowPanel4.Controls.Add(this.label5);
-            this.guna2ShadowPanel4.Controls.Add(this.label2);
-            this.guna2ShadowPanel4.Controls.Add(this.label17);
+            this.guna2ShadowPanel4.Controls.Add(this.lblSumlah);
+            this.guna2ShadowPanel4.Controls.Add(this.lblOrigin);
             this.guna2ShadowPanel4.Controls.Add(this.lblJaiyKrn);
             this.guna2ShadowPanel4.Controls.Add(this.label3);
             this.guna2ShadowPanel4.Controls.Add(this.guna2DataGridView1);
@@ -1383,6 +1408,174 @@ namespace kaenTaVen_V2
             this.guna2ShadowPanel4.Size = new System.Drawing.Size(1214, 1220);
             this.guna2ShadowPanel4.TabIndex = 13;
             this.guna2ShadowPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2ShadowPanel4_Paint);
+            // 
+            // lblDeliverChannelAlert
+            // 
+            this.lblDeliverChannelAlert.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblDeliverChannelAlert.AutoSize = true;
+            this.lblDeliverChannelAlert.Font = new System.Drawing.Font("Phetsarath OT", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeliverChannelAlert.ForeColor = System.Drawing.Color.Red;
+            this.lblDeliverChannelAlert.Location = new System.Drawing.Point(706, 942);
+            this.lblDeliverChannelAlert.Name = "lblDeliverChannelAlert";
+            this.lblDeliverChannelAlert.Size = new System.Drawing.Size(75, 23);
+            this.lblDeliverChannelAlert.TabIndex = 35;
+            this.lblDeliverChannelAlert.Text = "ຕື່ມຂໍ້ມູນ !!";
+            this.lblDeliverChannelAlert.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(371, 933);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(131, 35);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "ການຮັບສິນຄ້າ";
+            // 
+            // cbReceivedChannel
+            // 
+            this.cbReceivedChannel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.cbReceivedChannel.BackColor = System.Drawing.Color.Transparent;
+            this.cbReceivedChannel.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbReceivedChannel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbReceivedChannel.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbReceivedChannel.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbReceivedChannel.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbReceivedChannel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbReceivedChannel.ItemHeight = 30;
+            this.cbReceivedChannel.Items.AddRange(new object[] {
+            "ຝາກຂົນສົ່ງ",
+            "ມາເອົາເອງ"});
+            this.cbReceivedChannel.Location = new System.Drawing.Point(524, 933);
+            this.cbReceivedChannel.Name = "cbReceivedChannel";
+            this.cbReceivedChannel.Size = new System.Drawing.Size(152, 36);
+            this.cbReceivedChannel.TabIndex = 33;
+            this.cbReceivedChannel.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
+            // 
+            // lblPayTypeAlert
+            // 
+            this.lblPayTypeAlert.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblPayTypeAlert.AutoSize = true;
+            this.lblPayTypeAlert.Font = new System.Drawing.Font("Phetsarath OT", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPayTypeAlert.ForeColor = System.Drawing.Color.Red;
+            this.lblPayTypeAlert.Location = new System.Drawing.Point(723, 996);
+            this.lblPayTypeAlert.Name = "lblPayTypeAlert";
+            this.lblPayTypeAlert.Size = new System.Drawing.Size(75, 23);
+            this.lblPayTypeAlert.TabIndex = 32;
+            this.lblPayTypeAlert.Text = "ຕື່ມຂໍ້ມູນ !!";
+            this.lblPayTypeAlert.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Phetsarath OT", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(985, 1176);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 23);
+            this.label7.TabIndex = 32;
+            this.label7.Text = "ຕື່ມຂໍ້ມູນ !!";
+            this.label7.Visible = false;
+            // 
+            // txtExpressDes
+            // 
+            this.txtExpressDes.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtExpressDes.BorderColor = System.Drawing.Color.Teal;
+            this.txtExpressDes.BorderRadius = 10;
+            this.txtExpressDes.BorderThickness = 2;
+            this.txtExpressDes.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtExpressDes.DefaultText = "";
+            this.txtExpressDes.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtExpressDes.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtExpressDes.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExpressDes.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExpressDes.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExpressDes.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtExpressDes.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExpressDes.Location = new System.Drawing.Point(744, 1170);
+            this.txtExpressDes.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
+            this.txtExpressDes.Name = "txtExpressDes";
+            this.txtExpressDes.PasswordChar = '\0';
+            this.txtExpressDes.PlaceholderText = "";
+            this.txtExpressDes.SelectedText = "";
+            this.txtExpressDes.Size = new System.Drawing.Size(194, 41);
+            this.txtExpressDes.TabIndex = 31;
+            this.txtExpressDes.Visible = false;
+            this.txtExpressDes.TextChanged += new System.EventHandler(this.txtExpressDes_TextChanged);
+            // 
+            // lbldestination
+            // 
+            this.lbldestination.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lbldestination.AutoSize = true;
+            this.lbldestination.Location = new System.Drawing.Point(600, 1176);
+            this.lbldestination.Name = "lbldestination";
+            this.lbldestination.Size = new System.Drawing.Size(135, 35);
+            this.lbldestination.TabIndex = 30;
+            this.lbldestination.Text = "ສົ່ງໄປທີ່ຂົນສົ່ງ:";
+            this.lbldestination.Visible = false;
+            // 
+            // cbPayType
+            // 
+            this.cbPayType.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.cbPayType.BackColor = System.Drawing.Color.Transparent;
+            this.cbPayType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbPayType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbPayType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbPayType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbPayType.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbPayType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbPayType.ItemHeight = 30;
+            this.cbPayType.Items.AddRange(new object[] {
+            "ເງິນສົດ",
+            "ໂອນ",
+            "COD"});
+            this.cbPayType.Location = new System.Drawing.Point(586, 986);
+            this.cbPayType.Name = "cbPayType";
+            this.cbPayType.Size = new System.Drawing.Size(105, 36);
+            this.cbPayType.TabIndex = 29;
+            this.cbPayType.Visible = false;
+            this.cbPayType.SelectedIndexChanged += new System.EventHandler(this.cbPayType_SelectedIndexChanged);
+            // 
+            // DeliverCheck
+            // 
+            this.DeliverCheck.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.DeliverCheck.AutoSize = true;
+            this.DeliverCheck.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.DeliverCheck.CheckedState.BorderRadius = 0;
+            this.DeliverCheck.CheckedState.BorderThickness = 0;
+            this.DeliverCheck.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.DeliverCheck.Location = new System.Drawing.Point(459, 1119);
+            this.DeliverCheck.Name = "DeliverCheck";
+            this.DeliverCheck.Size = new System.Drawing.Size(131, 39);
+            this.DeliverCheck.TabIndex = 28;
+            this.DeliverCheck.Text = "ຍັງບໍ່ທັນສົ່ງ";
+            this.DeliverCheck.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.DeliverCheck.UncheckedState.BorderRadius = 0;
+            this.DeliverCheck.UncheckedState.BorderThickness = 0;
+            this.DeliverCheck.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.DeliverCheck.Visible = false;
+            this.DeliverCheck.CheckedChanged += new System.EventHandler(this.DeliverCheck_CheckedChanged);
+            // 
+            // PayCheck
+            // 
+            this.PayCheck.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.PayCheck.AutoSize = true;
+            this.PayCheck.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.PayCheck.CheckedState.BorderRadius = 0;
+            this.PayCheck.CheckedState.BorderThickness = 0;
+            this.PayCheck.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.PayCheck.Location = new System.Drawing.Point(363, 987);
+            this.PayCheck.Name = "PayCheck";
+            this.PayCheck.Size = new System.Drawing.Size(118, 39);
+            this.PayCheck.TabIndex = 27;
+            this.PayCheck.Text = "ຈ່າຍແລ້ວ";
+            this.PayCheck.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.PayCheck.UncheckedState.BorderRadius = 0;
+            this.PayCheck.UncheckedState.BorderThickness = 0;
+            this.PayCheck.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.PayCheck.Visible = false;
+            this.PayCheck.CheckedChanged += new System.EventHandler(this.PayCheck_CheckedChanged);
             // 
             // guna2Button2
             // 
@@ -1440,7 +1633,7 @@ namespace kaenTaVen_V2
             this.btnTotal.FillColor = System.Drawing.Color.LightGreen;
             this.btnTotal.Font = new System.Drawing.Font("Phetsarath OT", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTotal.ForeColor = System.Drawing.Color.Black;
-            this.btnTotal.Location = new System.Drawing.Point(925, 1024);
+            this.btnTotal.Location = new System.Drawing.Point(944, 997);
             this.btnTotal.Name = "btnTotal";
             this.btnTotal.Padding = new System.Windows.Forms.Padding(5);
             this.btnTotal.Size = new System.Drawing.Size(259, 136);
@@ -1463,7 +1656,7 @@ namespace kaenTaVen_V2
             this.txtTotal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotal.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotal.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTotal.Location = new System.Drawing.Point(114, 1149);
+            this.txtTotal.Location = new System.Drawing.Point(113, 1112);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.PasswordChar = '\0';
@@ -1487,7 +1680,7 @@ namespace kaenTaVen_V2
             this.txtQuanUnit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuanUnit.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuanUnit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtQuanUnit.Location = new System.Drawing.Point(114, 1086);
+            this.txtQuanUnit.Location = new System.Drawing.Point(113, 1022);
             this.txtQuanUnit.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.txtQuanUnit.Name = "txtQuanUnit";
             this.txtQuanUnit.PasswordChar = '\0';
@@ -1496,29 +1689,31 @@ namespace kaenTaVen_V2
             this.txtQuanUnit.Size = new System.Drawing.Size(194, 41);
             this.txtQuanUnit.TabIndex = 20;
             // 
-            // txtExpress
+            // txtExpressOrig
             // 
-            this.txtExpress.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.txtExpress.BorderColor = System.Drawing.Color.Teal;
-            this.txtExpress.BorderRadius = 10;
-            this.txtExpress.BorderThickness = 2;
-            this.txtExpress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtExpress.DefaultText = "";
-            this.txtExpress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtExpress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtExpress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtExpress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtExpress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExpress.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtExpress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtExpress.Location = new System.Drawing.Point(467, 1070);
-            this.txtExpress.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
-            this.txtExpress.Name = "txtExpress";
-            this.txtExpress.PasswordChar = '\0';
-            this.txtExpress.PlaceholderText = "";
-            this.txtExpress.SelectedText = "";
-            this.txtExpress.Size = new System.Drawing.Size(194, 41);
-            this.txtExpress.TabIndex = 20;
+            this.txtExpressOrig.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtExpressOrig.BorderColor = System.Drawing.Color.Teal;
+            this.txtExpressOrig.BorderRadius = 10;
+            this.txtExpressOrig.BorderThickness = 2;
+            this.txtExpressOrig.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtExpressOrig.DefaultText = "";
+            this.txtExpressOrig.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtExpressOrig.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtExpressOrig.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExpressOrig.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtExpressOrig.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExpressOrig.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtExpressOrig.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtExpressOrig.Location = new System.Drawing.Point(390, 1170);
+            this.txtExpressOrig.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
+            this.txtExpressOrig.Name = "txtExpressOrig";
+            this.txtExpressOrig.PasswordChar = '\0';
+            this.txtExpressOrig.PlaceholderText = "";
+            this.txtExpressOrig.SelectedText = "";
+            this.txtExpressOrig.Size = new System.Drawing.Size(194, 41);
+            this.txtExpressOrig.TabIndex = 20;
+            this.txtExpressOrig.Visible = false;
+            this.txtExpressOrig.TextChanged += new System.EventHandler(this.txtExpressOrig_TextChanged);
             // 
             // txtFirstInstallment
             // 
@@ -1535,14 +1730,16 @@ namespace kaenTaVen_V2
             this.txtFirstInstallment.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFirstInstallment.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFirstInstallment.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFirstInstallment.Location = new System.Drawing.Point(451, 1002);
+            this.txtFirstInstallment.Location = new System.Drawing.Point(562, 1045);
             this.txtFirstInstallment.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.txtFirstInstallment.Name = "txtFirstInstallment";
             this.txtFirstInstallment.PasswordChar = '\0';
             this.txtFirstInstallment.PlaceholderText = "";
             this.txtFirstInstallment.SelectedText = "";
-            this.txtFirstInstallment.Size = new System.Drawing.Size(194, 41);
+            this.txtFirstInstallment.Size = new System.Drawing.Size(126, 41);
             this.txtFirstInstallment.TabIndex = 20;
+            this.txtFirstInstallment.Visible = false;
+            this.txtFirstInstallment.TextChanged += new System.EventHandler(this.txtFirstInstallment_TextChanged);
             // 
             // txtPriceUnit
             // 
@@ -1559,7 +1756,7 @@ namespace kaenTaVen_V2
             this.txtPriceUnit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPriceUnit.Font = new System.Drawing.Font("Phetsarath OT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPriceUnit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPriceUnit.Location = new System.Drawing.Point(114, 1024);
+            this.txtPriceUnit.Location = new System.Drawing.Point(113, 933);
             this.txtPriceUnit.Margin = new System.Windows.Forms.Padding(6, 9, 6, 9);
             this.txtPriceUnit.Name = "txtPriceUnit";
             this.txtPriceUnit.PasswordChar = '\0';
@@ -1589,7 +1786,7 @@ namespace kaenTaVen_V2
             this.DebtCheck.CheckedState.BorderThickness = 0;
             this.DebtCheck.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.DebtCheck.Font = new System.Drawing.Font("Phetsarath OT", 12F);
-            this.DebtCheck.Location = new System.Drawing.Point(379, 951);
+            this.DebtCheck.Location = new System.Drawing.Point(363, 1047);
             this.DebtCheck.Name = "DebtCheck";
             this.DebtCheck.Size = new System.Drawing.Size(91, 39);
             this.DebtCheck.TabIndex = 19;
@@ -1598,6 +1795,7 @@ namespace kaenTaVen_V2
             this.DebtCheck.UncheckedState.BorderRadius = 0;
             this.DebtCheck.UncheckedState.BorderThickness = 0;
             this.DebtCheck.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.DebtCheck.Visible = false;
             this.DebtCheck.CheckedChanged += new System.EventHandler(this.DebtCheck_CheckedChanged);
             // 
             // label8
@@ -1605,7 +1803,7 @@ namespace kaenTaVen_V2
             this.label8.AllowDrop = true;
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(30, 1149);
+            this.label8.Location = new System.Drawing.Point(27, 1112);
             this.label8.Margin = new System.Windows.Forms.Padding(30, 0, 3, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 35);
@@ -1617,39 +1815,52 @@ namespace kaenTaVen_V2
             this.label5.AllowDrop = true;
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 1092);
+            this.label5.Location = new System.Drawing.Point(12, 1028);
             this.label5.Margin = new System.Windows.Forms.Padding(30, 0, 3, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 35);
             this.label5.TabIndex = 18;
             this.label5.Text = "ຈຳນວນ";
             // 
-            // label17
+            // lblSumlah
             // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(347, 1076);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(111, 35);
-            this.label17.TabIndex = 18;
-            this.label17.Text = "ຝາກຂົນສົ່ງ:";
+            this.lblSumlah.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblSumlah.AutoSize = true;
+            this.lblSumlah.Location = new System.Drawing.Point(482, 987);
+            this.lblSumlah.Name = "lblSumlah";
+            this.lblSumlah.Size = new System.Drawing.Size(98, 35);
+            this.lblSumlah.TabIndex = 18;
+            this.lblSumlah.Text = "ການຊຳລະ";
+            this.lblSumlah.Visible = false;
+            // 
+            // lblOrigin
+            // 
+            this.lblOrigin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblOrigin.AutoSize = true;
+            this.lblOrigin.Location = new System.Drawing.Point(254, 1176);
+            this.lblOrigin.Name = "lblOrigin";
+            this.lblOrigin.Size = new System.Drawing.Size(127, 35);
+            this.lblOrigin.TabIndex = 18;
+            this.lblOrigin.Text = "ຝາກທີ່ຂົນສົ່ງ:";
+            this.lblOrigin.Visible = false;
             // 
             // lblJaiyKrn
             // 
             this.lblJaiyKrn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblJaiyKrn.AutoSize = true;
-            this.lblJaiyKrn.Location = new System.Drawing.Point(342, 1008);
+            this.lblJaiyKrn.Location = new System.Drawing.Point(453, 1047);
             this.lblJaiyKrn.Name = "lblJaiyKrn";
             this.lblJaiyKrn.Size = new System.Drawing.Size(100, 35);
             this.lblJaiyKrn.TabIndex = 18;
             this.lblJaiyKrn.Text = "ຈ່າຍກ່ອນ:";
+            this.lblJaiyKrn.Visible = false;
             // 
             // label3
             // 
             this.label3.AllowDrop = true;
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 1030);
+            this.label3.Location = new System.Drawing.Point(24, 937);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 35);
@@ -1763,67 +1974,64 @@ namespace kaenTaVen_V2
             this.Pro_total.MinimumWidth = 8;
             this.Pro_total.Name = "Pro_total";
             // 
-            // PayCheck
+            // lblfirstInstallTypeAlert
             // 
-            this.PayCheck.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.PayCheck.AutoSize = true;
-            this.PayCheck.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.PayCheck.CheckedState.BorderRadius = 0;
-            this.PayCheck.CheckedState.BorderThickness = 0;
-            this.PayCheck.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.PayCheck.Location = new System.Drawing.Point(57, 953);
-            this.PayCheck.Name = "PayCheck";
-            this.PayCheck.Size = new System.Drawing.Size(118, 39);
-            this.PayCheck.TabIndex = 27;
-            this.PayCheck.Text = "ຈ່າຍແລ້ວ";
-            this.PayCheck.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.PayCheck.UncheckedState.BorderRadius = 0;
-            this.PayCheck.UncheckedState.BorderThickness = 0;
-            this.PayCheck.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.lblfirstInstallTypeAlert.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblfirstInstallTypeAlert.AutoSize = true;
+            this.lblfirstInstallTypeAlert.Font = new System.Drawing.Font("Phetsarath OT", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfirstInstallTypeAlert.ForeColor = System.Drawing.Color.Red;
+            this.lblfirstInstallTypeAlert.Location = new System.Drawing.Point(833, 1094);
+            this.lblfirstInstallTypeAlert.Name = "lblfirstInstallTypeAlert";
+            this.lblfirstInstallTypeAlert.Size = new System.Drawing.Size(75, 23);
+            this.lblfirstInstallTypeAlert.TabIndex = 38;
+            this.lblfirstInstallTypeAlert.Text = "ຕື່ມຂໍ້ມູນ !!";
+            this.lblfirstInstallTypeAlert.Visible = false;
             // 
-            // DeliverCheck
+            // cbFirstInstallType
             // 
-            this.DeliverCheck.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.DeliverCheck.AutoSize = true;
-            this.DeliverCheck.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.DeliverCheck.CheckedState.BorderRadius = 0;
-            this.DeliverCheck.CheckedState.BorderThickness = 0;
-            this.DeliverCheck.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.DeliverCheck.Location = new System.Drawing.Point(202, 953);
-            this.DeliverCheck.Name = "DeliverCheck";
-            this.DeliverCheck.Size = new System.Drawing.Size(157, 39);
-            this.DeliverCheck.TabIndex = 28;
-            this.DeliverCheck.Text = "ສົ່ງສິນຄ້າເເລ້ວ";
-            this.DeliverCheck.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.DeliverCheck.UncheckedState.BorderRadius = 0;
-            this.DeliverCheck.UncheckedState.BorderThickness = 0;
-            this.DeliverCheck.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cbFirstInstallType.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.cbFirstInstallType.BackColor = System.Drawing.Color.Transparent;
+            this.cbFirstInstallType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbFirstInstallType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbFirstInstallType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbFirstInstallType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbFirstInstallType.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbFirstInstallType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbFirstInstallType.ItemHeight = 30;
+            this.cbFirstInstallType.Items.AddRange(new object[] {
+            "ເງິນສົດ",
+            "ໂອນ",
+            "COD"});
+            this.cbFirstInstallType.Location = new System.Drawing.Point(810, 1045);
+            this.cbFirstInstallType.Name = "cbFirstInstallType";
+            this.cbFirstInstallType.Size = new System.Drawing.Size(105, 36);
+            this.cbFirstInstallType.TabIndex = 37;
+            this.cbFirstInstallType.Visible = false;
+            this.cbFirstInstallType.SelectedIndexChanged += new System.EventHandler(this.cbFirstInstallType_SelectedIndexChanged);
             // 
-            // cbPayType
+            // lblFirstInstallType
             // 
-            this.cbPayType.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.cbPayType.BackColor = System.Drawing.Color.Transparent;
-            this.cbPayType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbPayType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbPayType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbPayType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbPayType.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbPayType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbPayType.ItemHeight = 30;
-            this.cbPayType.Location = new System.Drawing.Point(505, 1139);
-            this.cbPayType.Name = "cbPayType";
-            this.cbPayType.Size = new System.Drawing.Size(140, 36);
-            this.cbPayType.TabIndex = 29;
+            this.lblFirstInstallType.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblFirstInstallType.AutoSize = true;
+            this.lblFirstInstallType.Location = new System.Drawing.Point(706, 1046);
+            this.lblFirstInstallType.Name = "lblFirstInstallType";
+            this.lblFirstInstallType.Size = new System.Drawing.Size(98, 35);
+            this.lblFirstInstallType.TabIndex = 36;
+            this.lblFirstInstallType.Text = "ການຊຳລະ";
+            this.lblFirstInstallType.Visible = false;
             // 
-            // label2
+            // lblfirstInstallAlert
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(347, 1139);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 35);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "ປະເພດການຈ່າຍ";
+            this.lblfirstInstallAlert.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblfirstInstallAlert.AutoSize = true;
+            this.lblfirstInstallAlert.Font = new System.Drawing.Font("Phetsarath OT", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfirstInstallAlert.ForeColor = System.Drawing.Color.Red;
+            this.lblfirstInstallAlert.Location = new System.Drawing.Point(601, 1094);
+            this.lblfirstInstallAlert.Name = "lblfirstInstallAlert";
+            this.lblfirstInstallAlert.Size = new System.Drawing.Size(75, 23);
+            this.lblfirstInstallAlert.TabIndex = 39;
+            this.lblfirstInstallAlert.Text = "ຕື່ມຂໍ້ມູນ !!";
+            this.lblfirstInstallAlert.Visible = false;
             // 
             // FormOrders
             // 
@@ -1904,7 +2112,7 @@ namespace kaenTaVen_V2
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblJaiyKrn;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblOrigin;
         private Guna.UI2.WinForms.Guna2Button btnLaiythai;
         private Guna.UI2.WinForms.Guna2TextBox txtTavenQuan;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel3;
@@ -1937,7 +2145,7 @@ namespace kaenTaVen_V2
         private Guna.UI2.WinForms.Guna2HtmlLabel lblBong;
         private Guna.UI2.WinForms.Guna2TextBox txtTotal;
         private Guna.UI2.WinForms.Guna2TextBox txtQuanUnit;
-        private Guna.UI2.WinForms.Guna2TextBox txtExpress;
+        private Guna.UI2.WinForms.Guna2TextBox txtExpressOrig;
         private Guna.UI2.WinForms.Guna2TextBox txtFirstInstallment;
         private Guna.UI2.WinForms.Guna2TextBox txtPriceUnit;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator2;
@@ -1975,6 +2183,17 @@ namespace kaenTaVen_V2
         private Guna.UI2.WinForms.Guna2CheckBox DeliverCheck;
         private Guna.UI2.WinForms.Guna2CheckBox PayCheck;
         private Guna.UI2.WinForms.Guna2ComboBox cbPayType;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSumlah;
+        private Guna.UI2.WinForms.Guna2TextBox txtExpressDes;
+        private System.Windows.Forms.Label lbldestination;
+        private System.Windows.Forms.Label lblPayTypeAlert;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2ComboBox cbReceivedChannel;
+        private System.Windows.Forms.Label lblDeliverChannelAlert;
+        private System.Windows.Forms.Label lblfirstInstallTypeAlert;
+        private Guna.UI2.WinForms.Guna2ComboBox cbFirstInstallType;
+        private System.Windows.Forms.Label lblFirstInstallType;
+        private System.Windows.Forms.Label lblfirstInstallAlert;
     }
 }

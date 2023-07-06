@@ -31,6 +31,7 @@ namespace kaenTaVen_V2
         public FormOrders()
         {
             InitializeComponent();
+            
 
 
         }
@@ -81,20 +82,7 @@ namespace kaenTaVen_V2
 
 
         }
-        public void load_PayType()
-        {
-
-            SqlCommand cmd = new SqlCommand("select payment_type_name from tbPaymentType", con.conder);
-            dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                cbPayType.Items.Add(dr[0].ToString());
-
-
-            }
-            dr.Close();
-        }
-
+        
 
         public void select_product_Info()
         {
@@ -211,9 +199,12 @@ namespace kaenTaVen_V2
             autoBillnum();
             select_product_Info();
             searchPhone();
-            load_PayType();
+      
             lblJaiyKrn.Visible = false;
             txtFirstInstallment.Visible = false;
+            lblfirstInstallTypeAlert.Visible = false;
+            cbFirstInstallType.Visible = false;
+            lblFirstInstallType.Visible = false;
 
         }
 
@@ -741,14 +732,68 @@ namespace kaenTaVen_V2
         {
 
         }
+
+        public void InsertDatatoDatabase_UpdateStock()
+        {
+            //Insert into tbInvocie
+            cmd = new SqlCommand("Insert into tbInvoice values (@InvID,@CusID,CURRENT_TIMESTAMP)", con.conder);
+            cmd.Parameters.AddWithValue("@InvID", lblInvNum.Text);
+            cmd.Parameters.AddWithValue("@CusID", lblCusID.Text);
+            cmd.ExecuteNonQuery();
+            for (int index = 0; index < guna2DataGridView1.Rows.Count - 1; index++)
+            {
+
+
+                string product_ID;
+                string STR3 = "select product_id from tbProduct where product_name = N'" + guna2DataGridView1.Rows[index].Cells[1].Value + "'";
+                cmd = new SqlCommand(STR3, con.conder);
+
+                dr = cmd.ExecuteReader();
+                dr.Read();
+                product_ID = Convert.ToString(dr[0]);
+                dr.Close();
+
+
+                //Insert into Order_detail
+                cmd = new SqlCommand("INSERT into Order_detail VALUES(@InvNum, @proID, @unitPrice,@quan,@subTotal)", con.conder);
+                cmd.Parameters.AddWithValue("@InvNum", lblInvNum.Text);
+                cmd.Parameters.AddWithValue("@proID", product_ID);
+                cmd.Parameters.AddWithValue("@unitPrice", guna2DataGridView1.Rows[index].Cells[2].Value);
+                cmd.Parameters.AddWithValue("@quan", guna2DataGridView1.Rows[index].Cells[3].Value);
+                cmd.Parameters.AddWithValue("@subTotal", guna2DataGridView1.Rows[index].Cells[4].Value);
+
+                cmd.ExecuteNonQuery();
+
+                string stock_quan;
+                string STR7 = "select quantity from tbStock where product_id = @ProID";
+                SqlCommand cmd1 = new SqlCommand(STR7, con.conder);
+                cmd1.Parameters.AddWithValue("@ProID", product_ID);
+                //   cmd1.Parameters.AddWithValue("@ProID", );
+                dr = cmd1.ExecuteReader();
+                dr.Read();
+                stock_quan = Convert.ToString(dr[0]);
+
+                dr.Close();
+                float quan = float.Parse(stock_quan) - float.Parse(guna2DataGridView1.Rows[index].Cells[3].Value.ToString());
+                //Update Stock  Quantity
+                SqlCommand cmd2 = new SqlCommand("Update tbStock set quantity = @quan where product_id = @id", con.conder);
+                cmd2.Parameters.AddWithValue("@id", product_ID);
+                cmd2.Parameters.AddWithValue("@quan", quan);
+                if (cmd2.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show(quan.ToString());
+                    MessageBox.Show("Stock quantity has been deducted");
+                }
+                
+
+            }
+        }
         public void InsertDataTodatabse()
         {
             //Insert into tbInvocie
             cmd = new SqlCommand("Insert into tbInvoice values (@InvID,@CusID,CURRENT_TIMESTAMP)", con.conder);
             cmd.Parameters.AddWithValue("@InvID", lblInvNum.Text);
             cmd.Parameters.AddWithValue("@CusID", lblCusID.Text);
-
-
             cmd.ExecuteNonQuery();
 
             for (int index = 0; index < guna2DataGridView1.Rows.Count - 1; index++)
@@ -780,183 +825,478 @@ namespace kaenTaVen_V2
 
         private void btnTotal_Click(object sender, EventArgs e)
         {
-
-
-
-
-
             if (lblCusID.Text != "result cusID" && lblCusID.Text != "Result CusName")
             {
 
 
-                string payTypeID, Payment_StatusID, delivery_status;
+                string Payment_StatusID;
 
-                if (PayCheck.Checked == true && DeliverCheck.Checked == false)
+                if (cbReceivedChannel.Text == "ຝາກຂົນສົ່ງ")
                 {
-                    if (cbPayType.Text != "")
+                    if (PayCheck.Checked == true && DeliverCheck.Checked == true)
                     {
-                        InsertDataTodatabse();
+                        if ( txtExpressOrig.Text != "" && txtExpressDes.Text != "")
+                        {
+                            if (cbPayType.Text != "")
+                            {
 
-                        string STR4 = "select payment_type_id from tbPaymentType where payment_type_name = @paytypename";
-                        cmd = new SqlCommand(STR4, con.conder);
-                        cmd.Parameters.AddWithValue("@paytypename", cbPayType.Text);
-                        dr = cmd.ExecuteReader();
-                        dr.Read();
-                        payTypeID = Convert.ToString(dr[0]);
-                        dr.Close();
 
-                        string STR6 = "select payment_status_id from tbPaymentStatus where payment_status_name = @paystatusename";
-                        cmd = new SqlCommand(STR6, con.conder);
-                        cmd.Parameters.AddWithValue("@paystatusename", PayCheck.Text);
-                        dr = cmd.ExecuteReader();
-                        dr.Read();
-                        Payment_StatusID = Convert.ToString(dr[0]);
-                        dr.Close();
+                                InsertDatatoDatabase_UpdateStock();
 
-                        cmd = new SqlCommand("Insert into tbSales values (@InvNum,@paytypeID,@payStatusID,@totalBill,null,2,CURRENT_TIMESTAMP)", con.conder);
-                        cmd.Parameters.AddWithValue("@InvNum", lblInvNum.Text);
-                        cmd.Parameters.AddWithValue("@paytypeID", payTypeID);
-                        cmd.Parameters.AddWithValue("@payStatusID", Payment_StatusID);
-                        cmd.Parameters.AddWithValue("@totalBill", float.Parse(btnTotal.Text.Substring(8)));
-                        cmd.ExecuteNonQuery();
+                                string STR6 = "select payment_status_id from tbPaymentStatus where payment_status_name = @paystatusename";
+                                cmd = new SqlCommand(STR6, con.conder);
+                                cmd.Parameters.AddWithValue("@paystatusename", PayCheck.Text);
+                                dr = cmd.ExecuteReader();
+                                dr.Read();
+                                Payment_StatusID = Convert.ToString(dr[0]);
+                                dr.Close();
 
-                        MessageBox.Show("Ordered Successful");
-                        MessageBox.Show("Do you want to print bill?", "Print Bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        autoBillnum();
+
+
+
+
+                                cmd = new SqlCommand("Insert into tbSales values (@InvNum,@paytypeID,@payStatusID,@totalBill,0 ,@delivery_status,@expressOri,CURRENT_TIMESTAMP,@expressDes,@receivedChannel)", con.conder);
+                                cmd.Parameters.AddWithValue("@InvNum", lblInvNum.Text);
+                                cmd.Parameters.AddWithValue("@paytypeID", cbPayType.Text);
+                                cmd.Parameters.AddWithValue("@payStatusID", Payment_StatusID);
+                                cmd.Parameters.AddWithValue("@delivery_status", DeliverCheck.Text);
+                                cmd.Parameters.AddWithValue("@expressOri", txtExpressOrig.Text);
+                                cmd.Parameters.AddWithValue("@expressDes", txtExpressDes.Text);
+                                cmd.Parameters.AddWithValue("@receivedChannel", cbReceivedChannel.Text);
+                                cmd.Parameters.AddWithValue("@totalBill", float.Parse(btnTotal.Text.Substring(8)));
+
+                                if (cmd.ExecuteNonQuery() == 1)
+                                {
+                                    MessageBox.Show("Ordered Successful");
+                                    MessageBox.Show("Do you want to print bill?", "Print Bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                    autoBillnum();
+                                }
+                            }
+                            else {
+                                MessageBox.Show("Input to Payment Type");
+                                lblPayTypeAlert.Visible = true;
+                            }
+
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Input Neccessary info!!");
+                         
+                            label7.Visible = true;
+                        }
                     }
-                    else
+                    else if (PayCheck.Checked == true && DeliverCheck.Checked == false)
                     {
-                        MessageBox.Show("error");
+                        if ( txtExpressOrig.Text != "" && txtExpressDes.Text != "")
+                        {
+                            if (cbPayType.Text != "")
+                            {
+
+
+                                string STR6 = "select payment_status_id from tbPaymentStatus where payment_status_name = @paystatusename";
+                                cmd = new SqlCommand(STR6, con.conder);
+                                cmd.Parameters.AddWithValue("@paystatusename", PayCheck.Text);
+                                dr = cmd.ExecuteReader();
+                                dr.Read();
+                                Payment_StatusID = Convert.ToString(dr[0]);
+                                dr.Close();
+
+
+                                InsertDataTodatabse();
+
+                                cmd = new SqlCommand("Insert into tbSales values (@InvNum,@paytypeID,@payStatusID,@totalBill,0,@delivery_status,@expressOri,null,@expressDes,@receivedChannel)", con.conder);
+                                cmd.Parameters.AddWithValue("@InvNum", lblInvNum.Text);
+                                cmd.Parameters.AddWithValue("@paytypeID", cbPayType.Text);
+                                cmd.Parameters.AddWithValue("@payStatusID", Payment_StatusID);
+                                cmd.Parameters.AddWithValue("@delivery_status", DeliverCheck.Text);
+                                cmd.Parameters.AddWithValue("@expressOri", txtExpressOrig.Text);
+                                cmd.Parameters.AddWithValue("@receivedChannel", cbReceivedChannel.Text);
+                                cmd.Parameters.AddWithValue("@expressDes", txtExpressDes.Text);
+                                cmd.Parameters.AddWithValue("@totalBill", float.Parse(btnTotal.Text.Substring(8)));
+                                if (cmd.ExecuteNonQuery() == 1)
+                                {
+                                    MessageBox.Show("Ordered Successful");
+                                    MessageBox.Show("Do you want to print bill?", "Print Bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                    autoBillnum();
+                                }
+                            }
+                            else
+                            {
+                                lblPayTypeAlert.Visible = true;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Input Neccessary info!!");
+                            label7.Visible = true;
+                     
+                        }
                     }
-                }
-                else if (PayCheck.Checked == false && DeliverCheck.Checked == true)
-                {
-                    InsertDataTodatabse();
-                    string STR6 = "select delivery_status_id from tbCheckDeliverStatus where delivery_status_id=1";
-                    cmd = new SqlCommand(STR6, con.conder);
-                    dr = cmd.ExecuteReader();
-                    dr.Read();
-                    delivery_status = Convert.ToString(dr[0]);
-                    dr.Close();
-                    cmd = new SqlCommand("Insert into tbSales values(@InvNum,null,2,@totalBill,null,@delivery_status,CURRENT_TIMESTAMP)", con.conder);
-                    cmd.Parameters.AddWithValue("@InvNum", lblInvNum.Text);
-                    cmd.Parameters.AddWithValue("@delivery_status", delivery_status);
-                    cmd.Parameters.AddWithValue("@totalBill", float.Parse(btnTotal.Text.Substring(8)));
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Ordered Successful");
-                    MessageBox.Show("Do you want to print bill?", "Print Bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    autoBillnum();
-                }
-
-
-
-                if (DebtCheck.Checked == true && DeliverCheck.Checked == true)
-                {
-
-                    float Firstinstallment = float.Parse(txtFirstInstallment.Text);
-                    if (txtFirstInstallment.Text != "" && cbPayType.Text != "")
+                    else if (DebtCheck.Checked == true && DeliverCheck.Checked == true)
                     {
-                        InsertDataTodatabse();
-                        string STR4 = "select payment_type_id from tbPaymentType where payment_type_name = @paytypename";
-                        cmd = new SqlCommand(STR4, con.conder);
-                        cmd.Parameters.AddWithValue("@paytypename", cbPayType.Text);
-                        dr = cmd.ExecuteReader();
-                        dr.Read();
-                        payTypeID = Convert.ToString(dr[0]);
-                        dr.Close();
-
-                        string STR6 = "select delivery_status_id from tbCheckDeliverStatus where delivery_status_id=1";
-                        cmd = new SqlCommand(STR6, con.conder);
-                        dr = cmd.ExecuteReader();
-                        dr.Read();
-                        delivery_status = Convert.ToString(dr[0]);
-                        dr.Close();
-                        cmd = new SqlCommand("Insert into tbSales values(@InvNum,@paytypeID,2,@totalBill,@first_install,@delivery_status,CURRENT_TIMESTAMP)", con.conder);
-                        cmd.Parameters.AddWithValue("@InvNum", lblInvNum.Text);
-                        cmd.Parameters.AddWithValue("@paytypeID", payTypeID);
-                        cmd.Parameters.AddWithValue("@delivery_status", delivery_status);
-                        cmd.Parameters.AddWithValue("@first_install", Firstinstallment);
-                        cmd.Parameters.AddWithValue("@totalBill", float.Parse(btnTotal.Text.Substring(8)));
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Ordered Successful");
-                        MessageBox.Show("Do you want to print bill?", "Print Bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        autoBillnum();
-                    }
+                        if (txtExpressOrig.Text != "" && txtExpressDes.Text != "")
+                        {
+                            if (txtFirstInstallment.Text == "0")
+                            {
+                                float Firstinstallment = float.Parse(txtFirstInstallment.Text);
 
 
 
+                                InsertDatatoDatabase_UpdateStock();
+                                cmd = new SqlCommand("Insert into tbSales values(@InvNum,null,2,@totalBill,@first_install,@delivery_status,@expressOri,CURRENT_TIMESTAMP,@expressDes,@receivedChannel)", con.conder);
+                                cmd.Parameters.AddWithValue("@InvNum", lblInvNum.Text);
 
-                }
-                else if (DebtCheck.Checked == true && DeliverCheck.Checked == false)
-                {
+                                cmd.Parameters.AddWithValue("@expressOri", txtExpressOrig.Text);
+                                cmd.Parameters.AddWithValue("@expressDes", txtExpressDes.Text);
+                                cmd.Parameters.AddWithValue("@delivery_status", DeliverCheck.Text);
+                                cmd.Parameters.AddWithValue("@receivedChannel", cbReceivedChannel.Text);
+                                cmd.Parameters.AddWithValue("@first_install", Firstinstallment);
+                                cmd.Parameters.AddWithValue("@totalBill", float.Parse(btnTotal.Text.Substring(8)));
+                                if (cmd.ExecuteNonQuery() == 1)
+                                {
+                                    MessageBox.Show("Ordered Successful");
+                                    MessageBox.Show("Do you want to print bill?", "Print Bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                    autoBillnum();
+                                }
 
+                            }
+
+                            else if (txtFirstInstallment.Text != "0")
+                            {
+                                if (cbFirstInstallType.Text != "" && txtFirstInstallment.Text != "")
+                                {
+
+
+                                    float Firstinstallment = float.Parse(txtFirstInstallment.Text);
+
+
+
+                                    InsertDatatoDatabase_UpdateStock();
+                                    cmd = new SqlCommand("Insert into tbSales values(@InvNum,@paytype,2,@totalBill,@first_install,@delivery_status,@expressOri,CURRENT_TIMESTAMP,@expressDes,@receivedChannel)", con.conder);
+                                    cmd.Parameters.AddWithValue("@InvNum", lblInvNum.Text);
+
+                                    cmd.Parameters.AddWithValue("@expressOri", txtExpressOrig.Text);
+                                    cmd.Parameters.AddWithValue("@expressDes", txtExpressDes.Text);
+                                    cmd.Parameters.AddWithValue("@delivery_status", DeliverCheck.Text);
+                                    cmd.Parameters.AddWithValue("@receivedChannel", cbReceivedChannel.Text);
+                                    cmd.Parameters.AddWithValue("@paytype", cbFirstInstallType.Text);
+                                    cmd.Parameters.AddWithValue("@first_install", Firstinstallment);
+                                    cmd.Parameters.AddWithValue("@totalBill", float.Parse(btnTotal.Text.Substring(8)));
+                                    if (cmd.ExecuteNonQuery() == 1)
+                                    {
+                                        MessageBox.Show("Ordered Successful");
+                                        MessageBox.Show("Do you want to print bill?", "Print Bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                        autoBillnum();
+                                    }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Please Input Payment Type");
+                                    lblfirstInstallAlert.Visible = true; 
+                                }
+                            }
+                            
+                        }
                     
-                    if (txtFirstInstallment.Text != "" && cbPayType.Text != "")
-                    {
-                        InsertDataTodatabse();
 
 
-                        float Firstinstallment = float.Parse(txtFirstInstallment.Text);
-                        string STR4 = "select payment_type_id from tbPaymentType where payment_type_name = @paytypename";
-                        cmd = new SqlCommand(STR4, con.conder);
-                        cmd.Parameters.AddWithValue("@paytypename", cbPayType.Text);
-                        dr = cmd.ExecuteReader();
-                        dr.Read();
-                        payTypeID = Convert.ToString(dr[0]);
-                        dr.Close();
-
-                        string STR6 = "select delivery_status_id from tbCheckDeliverStatus where delivery_status_id=2";
-                        cmd = new SqlCommand(STR6, con.conder);
-                        dr = cmd.ExecuteReader();
-                        dr.Read();
-                        delivery_status = Convert.ToString(dr[0]);
-                        dr.Close();
-
-                        cmd = new SqlCommand("Insert into tbSales values(@InvNum,@paytypeID,2,@totalBill,@first_install,@delivery_status,CURRENT_TIMESTAMP)", con.conder);
-                        cmd.Parameters.AddWithValue("@InvNum", lblInvNum.Text);
-                        cmd.Parameters.AddWithValue("@paytypeID", payTypeID);
-                        cmd.Parameters.AddWithValue("@delivery_status", delivery_status);
-                        cmd.Parameters.AddWithValue("@first_install", Firstinstallment);
-                        cmd.Parameters.AddWithValue("@totalBill", float.Parse(btnTotal.Text.Substring(8)));
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Ordered Successful");
-                        MessageBox.Show("Do you want to print bill?", "Print Bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        autoBillnum();
-                    }
                     else
                     {
-                        MessageBox.Show("error");
+                        MessageBox.Show("Input Neccessary info!!");
+                        label7.Visible = true;
                     }
+                
+
+                    }
+                    else if (DebtCheck.Checked == true && DeliverCheck.Checked == false)
+                    {
+                        if (txtExpressOrig.Text != "" && txtExpressDes.Text != "")
+                        {
+                            if (txtFirstInstallment.Text == "0")
+                            {
+                                float Firstinstallment = float.Parse(txtFirstInstallment.Text);
 
 
+
+                                InsertDatatoDatabase_UpdateStock();
+                                cmd = new SqlCommand("Insert into tbSales values(@InvNum,null,2,@totalBill,@first_install,@delivery_status,@expressOri,null,@expressDes,@receivedChannel)", con.conder);
+                                cmd.Parameters.AddWithValue("@InvNum", lblInvNum.Text);
+
+                                cmd.Parameters.AddWithValue("@expressOri", txtExpressOrig.Text);
+                                cmd.Parameters.AddWithValue("@expressDes", txtExpressDes.Text);
+                                cmd.Parameters.AddWithValue("@delivery_status", DeliverCheck.Text);
+                                cmd.Parameters.AddWithValue("@receivedChannel", cbReceivedChannel.Text);
+                                cmd.Parameters.AddWithValue("@first_install", Firstinstallment);
+                                cmd.Parameters.AddWithValue("@totalBill", float.Parse(btnTotal.Text.Substring(8)));
+                                if (cmd.ExecuteNonQuery() == 1)
+                                {
+                                    MessageBox.Show("Ordered Successful");
+                                    MessageBox.Show("Do you want to print bill?", "Print Bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                    autoBillnum();
+                                }
+
+                            }
+
+                            else if (txtFirstInstallment.Text != "0")
+                            {
+                                if (txtFirstInstallment.Text != "" && cbFirstInstallType.Text !="")
+                                {
+
+
+                                    float Firstinstallment = float.Parse(txtFirstInstallment.Text);
+
+
+
+                                    InsertDatatoDatabase_UpdateStock();
+                                    cmd = new SqlCommand("Insert into tbSales values(@InvNum,@paytype,2,@totalBill,@first_install,@delivery_status,@expressOri,null,@expressDes,@receivedChannel)", con.conder);
+                                    cmd.Parameters.AddWithValue("@InvNum", lblInvNum.Text);
+
+                                    cmd.Parameters.AddWithValue("@expressOri", txtExpressOrig.Text);
+                                    cmd.Parameters.AddWithValue("@expressDes", txtExpressDes.Text);
+                                    cmd.Parameters.AddWithValue("@delivery_status", DeliverCheck.Text);
+                                    cmd.Parameters.AddWithValue("@receivedChannel", cbReceivedChannel.Text);
+                                    cmd.Parameters.AddWithValue("@paytype", cbFirstInstallType.Text);
+                                    cmd.Parameters.AddWithValue("@first_install", Firstinstallment);
+                                    cmd.Parameters.AddWithValue("@totalBill", float.Parse(btnTotal.Text.Substring(8)));
+                                    if (cmd.ExecuteNonQuery() == 1)
+                                    {
+                                        MessageBox.Show("Ordered Successful");
+                                        MessageBox.Show("Do you want to print bill?", "Print Bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                        autoBillnum();
+                                    }
+                                }
+                               
+                                else
+                                {
+                                    MessageBox.Show("Please Input Payment Type and installment");
+                                    lblfirstInstallAlert.Visible = true;
+                                    lblfirstInstallTypeAlert.Visible = true;
+                                }
+                                
+                            
+                               
+                            }
+                         }
+                        else
+                        {
+                            MessageBox.Show("Input Neccessary info!!");
+                            label7.Visible = true;
+                        }
+                    }
+                   
                 }
-                if (PayCheck.Checked == false && DeliverCheck.Checked == false && DebtCheck.Checked == false)
+                else if (cbReceivedChannel.Text == "ມາເອົາເອງ")
                 {
-                    InsertDataTodatabse();
-                    string STR4 = "select payment_type_id from tbPaymentType where payment_type_name = @paytypename";
-                    cmd = new SqlCommand(STR4, con.conder);
-                    cmd.Parameters.AddWithValue("@paytypename", cbPayType.Text);
-                    dr = cmd.ExecuteReader();
-                    dr.Read();
-                    payTypeID = Convert.ToString(dr[0]);
-                    dr.Close();
-                    cmd = new SqlCommand("Insert into tbSales values(@InvNum,@paytypeID,2,@totalBill,null,2,CURRENT_TIMESTAMP)", con.conder);
-                    cmd.Parameters.AddWithValue("@InvNum", lblInvNum.Text);
+                    if (PayCheck.Checked == true && DeliverCheck.Checked == true)
+                    {
+                        if (cbPayType.Text != "")
+                        {
+                            string STR6 = "select payment_status_id from tbPaymentStatus where payment_status_name = @paystatusename";
+                            cmd = new SqlCommand(STR6, con.conder);
+                            cmd.Parameters.AddWithValue("@paystatusename", PayCheck.Text);
+                            dr = cmd.ExecuteReader();
+                            dr.Read();
+                            Payment_StatusID = Convert.ToString(dr[0]);
+                            dr.Close();
+                            InsertDatatoDatabase_UpdateStock();
 
-                    cmd.Parameters.AddWithValue("@paytypeID", payTypeID);
-                    cmd.Parameters.AddWithValue("@totalBill", float.Parse(btnTotal.Text.Substring(8)));
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Ordered Successful");
-                    MessageBox.Show("Do you want to print bill?", "Print Bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    autoBillnum();
+                            cmd = new SqlCommand("Insert into tbSales values (@InvNum,@paytypeID,@payStatusID,@totalBill,@first_install,@delivery_status,@expressOri,CURRENT_TIMESTAMP,@expressDes,@receivedChannel)", con.conder);
+                            cmd.Parameters.AddWithValue("@InvNum", lblInvNum.Text);
+                            cmd.Parameters.AddWithValue("@paytypeID", cbPayType.Text);
+                            cmd.Parameters.AddWithValue("@payStatusID", Payment_StatusID);
+                            cmd.Parameters.AddWithValue("@delivery_status", DeliverCheck.Text);
+                            cmd.Parameters.AddWithValue("@receivedChannel", cbReceivedChannel.Text);
+                            cmd.Parameters.AddWithValue("@first_install", txtFirstInstallment.Text);
+                            cmd.Parameters.AddWithValue("@expressOri", txtExpressOrig.Text);
+                            cmd.Parameters.AddWithValue("@expressDes", txtExpressDes.Text);
+                            cmd.Parameters.AddWithValue("@totalBill", float.Parse(btnTotal.Text.Substring(8)));
+                            if (cmd.ExecuteNonQuery() == 1)
+                            {
+                                MessageBox.Show("Ordered Successful");
+                                MessageBox.Show("Do you want to print bill?", "Print Bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                autoBillnum();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Input Neccessary Information");
+                            lblPayTypeAlert.Visible = true;
+                        }
+                    }
+                    else if (PayCheck.Checked == true && DeliverCheck.Checked == false)
+                    {
+                        if (cbPayType.Text != "")
+                        {
+                            string STR6 = "select payment_status_id from tbPaymentStatus where payment_status_name = @paystatusename";
+                            cmd = new SqlCommand(STR6, con.conder);
+                            cmd.Parameters.AddWithValue("@paystatusename", PayCheck.Text);
+                            dr = cmd.ExecuteReader();
+                            dr.Read();
+                            Payment_StatusID = Convert.ToString(dr[0]);
+                            dr.Close();
+                            InsertDatatoDatabase_UpdateStock();
+
+                            cmd = new SqlCommand("Insert into tbSales values (@InvNum,@paytypeID,@payStatusID,@totalBill,@first_install,@delivery_status,@expressOri,null,@expressDes,@receivedChannel)", con.conder);
+                            cmd.Parameters.AddWithValue("@InvNum", lblInvNum.Text);
+                            cmd.Parameters.AddWithValue("@paytypeID", cbPayType.Text);
+                            cmd.Parameters.AddWithValue("@payStatusID", Payment_StatusID);
+                            cmd.Parameters.AddWithValue("@delivery_status", DeliverCheck.Text);
+                            cmd.Parameters.AddWithValue("@receivedChannel", cbReceivedChannel.Text);
+                            cmd.Parameters.AddWithValue("@first_install", txtFirstInstallment.Text);
+                            cmd.Parameters.AddWithValue("@expressOri", txtExpressOrig.Text);
+                            cmd.Parameters.AddWithValue("@expressDes", txtExpressDes.Text);
+                            cmd.Parameters.AddWithValue("@totalBill", float.Parse(btnTotal.Text.Substring(8)));
+                            if (cmd.ExecuteNonQuery() == 1)
+                            {
+                                MessageBox.Show("Ordered Successful");
+                                MessageBox.Show("Do you want to print bill?", "Print Bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                autoBillnum();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Input Neccessary Information");
+                            lblPayTypeAlert.Visible = true;
+                        }
+                    }
+                    else if (DebtCheck.Checked == true && DeliverCheck.Checked == true)
+                    {
+                        if (txtFirstInstallment.Text == "0" && txtFirstInstallment.Text != "")
+                        {
+                            float Firstinstallment = float.Parse(txtFirstInstallment.Text);
+
+
+
+                            InsertDatatoDatabase_UpdateStock();
+                            cmd = new SqlCommand("Insert into tbSales values(@InvNum,null,2,@totalBill,@first_install,@delivery_status,@expressOri,CURRENT_TIMESTAMP,@expressDes,@receivedChannel)", con.conder);
+                            cmd.Parameters.AddWithValue("@InvNum", lblInvNum.Text);
+
+                            cmd.Parameters.AddWithValue("@expressOri", txtExpressOrig.Text);
+                            cmd.Parameters.AddWithValue("@expressDes", txtExpressDes.Text);
+                            cmd.Parameters.AddWithValue("@delivery_status", DeliverCheck.Text);
+                            cmd.Parameters.AddWithValue("@receivedChannel", cbReceivedChannel.Text);
+                            cmd.Parameters.AddWithValue("@first_install", Firstinstallment);
+                            cmd.Parameters.AddWithValue("@totalBill", float.Parse(btnTotal.Text.Substring(8)));
+                            if (cmd.ExecuteNonQuery() == 1)
+                            {
+                                MessageBox.Show("Ordered Successful");
+                                MessageBox.Show("Do you want to print bill?", "Print Bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                autoBillnum();
+                            }
+
+                        }
+
+
+                        else if (txtFirstInstallment.Text != "0")
+                        {
+                            if (cbFirstInstallType.Text != "" && txtFirstInstallment.Text != "")
+                            {
+
+
+                                float Firstinstallment = float.Parse(txtFirstInstallment.Text);
+
+
+
+                                InsertDatatoDatabase_UpdateStock();
+                                cmd = new SqlCommand("Insert into tbSales values(@InvNum,@paytype,2,@totalBill,@first_install,@delivery_status,@expressOri,CURRENT_TIMESTAMP,@expressDes,@receivedChannel)", con.conder);
+                                cmd.Parameters.AddWithValue("@InvNum", lblInvNum.Text);
+
+                                cmd.Parameters.AddWithValue("@expressOri", txtExpressOrig.Text);
+                                cmd.Parameters.AddWithValue("@expressDes", txtExpressDes.Text);
+                                cmd.Parameters.AddWithValue("@delivery_status", DeliverCheck.Text);
+                                cmd.Parameters.AddWithValue("@receivedChannel", cbReceivedChannel.Text);
+                                cmd.Parameters.AddWithValue("@paytype", cbFirstInstallType.Text);
+                                cmd.Parameters.AddWithValue("@first_install", Firstinstallment);
+                                cmd.Parameters.AddWithValue("@totalBill", float.Parse(btnTotal.Text.Substring(8)));
+                                if (cmd.ExecuteNonQuery() == 1)
+                                {
+                                    MessageBox.Show("Ordered Successful");
+                                    MessageBox.Show("Do you want to print bill?", "Print Bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                    autoBillnum();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Please Input Payment Type");
+                                lblfirstInstallAlert.Visible = true;
+                            }
+                        }
+
+                        }
+                    else if (DebtCheck.Checked == true && DeliverCheck.Checked == false)
+                    {
+
+                        if (txtFirstInstallment.Text == "0")
+                        {
+                            float Firstinstallment = float.Parse(txtFirstInstallment.Text);
+
+
+
+                            InsertDatatoDatabase_UpdateStock();
+                            cmd = new SqlCommand("Insert into tbSales values(@InvNum,null,2,@totalBill,@first_install,@delivery_status,@expressOri,null,@expressDes,@receivedChannel)", con.conder);
+                            cmd.Parameters.AddWithValue("@InvNum", lblInvNum.Text);
+
+                            cmd.Parameters.AddWithValue("@expressOri", txtExpressOrig.Text);
+                            cmd.Parameters.AddWithValue("@expressDes", txtExpressDes.Text);
+                            cmd.Parameters.AddWithValue("@delivery_status", DeliverCheck.Text);
+                            cmd.Parameters.AddWithValue("@receivedChannel", cbReceivedChannel.Text);
+                            cmd.Parameters.AddWithValue("@first_install", Firstinstallment);
+                            cmd.Parameters.AddWithValue("@totalBill", float.Parse(btnTotal.Text.Substring(8)));
+                            if (cmd.ExecuteNonQuery() == 1)
+                            {
+                                MessageBox.Show("Ordered Successful");
+                                MessageBox.Show("Do you want to print bill?", "Print Bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                autoBillnum();
+                            }
+
+                        }
+
+                        else if (txtFirstInstallment.Text != "0")
+                        {
+                            if (cbFirstInstallType.Text != "" && txtFirstInstallment.Text != "")
+                            {
+
+
+                                float Firstinstallment = float.Parse(txtFirstInstallment.Text);
+
+
+
+                                InsertDatatoDatabase_UpdateStock();
+                                cmd = new SqlCommand("Insert into tbSales values(@InvNum,@paytype,2,@totalBill,@first_install,@delivery_status,@expressOri,null,@expressDes,@receivedChannel)", con.conder);
+                                cmd.Parameters.AddWithValue("@InvNum", lblInvNum.Text);
+
+                                cmd.Parameters.AddWithValue("@expressOri", txtExpressOrig.Text);
+                                cmd.Parameters.AddWithValue("@expressDes", txtExpressDes.Text);
+                                cmd.Parameters.AddWithValue("@delivery_status", DeliverCheck.Text);
+                                cmd.Parameters.AddWithValue("@receivedChannel", cbReceivedChannel.Text);
+                                cmd.Parameters.AddWithValue("@paytype", cbFirstInstallType.Text);
+                                cmd.Parameters.AddWithValue("@first_install", Firstinstallment);
+                                cmd.Parameters.AddWithValue("@totalBill", float.Parse(btnTotal.Text.Substring(8)));
+                                if (cmd.ExecuteNonQuery() == 1)
+                                {
+                                    MessageBox.Show("Ordered Successful");
+                                    MessageBox.Show("Do you want to print bill?", "Print Bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                    autoBillnum();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Please Input Payment Type");
+                                lblfirstInstallAlert.Visible = true;
+                                lblfirstInstallTypeAlert.Visible = true;
+                            }
+                        }
+                        }
                 }
                 else
                 {
-                    txtTavenPrice.Text = "";
-                    PayCheck.Checked = false;
-                    DeliverCheck.Checked = false;
-                    DebtCheck.Checked = false;
+                    MessageBox.Show("Input Received Channel");
+                    lblDeliverChannelAlert.Visible = true;
+
+
                 }
+
 
             }
             else
@@ -980,21 +1320,127 @@ namespace kaenTaVen_V2
         {
             if (DebtCheck.Checked == true)
             {
-
+                txtFirstInstallment.Text = "0";
+                lblSumlah.Visible = false;
 
                 lblJaiyKrn.Visible = true;
                 txtFirstInstallment.Visible = true;
+                PayCheck.Visible = false;
+                cbPayType.Visible = false;
+                lblfirstInstallTypeAlert.Visible = false;
+                cbFirstInstallType.Visible = false;
+                lblFirstInstallType.Visible = false;
             }
-            else
+            else if (DebtCheck.Checked == false)
             {
-                lblJaiyKrn.Visible = false;
-                txtFirstInstallment.Visible = false;
+                lblJaiyKrn.Visible = true;
+                txtFirstInstallment.Visible = true;
+                PayCheck.Visible = true;
+                lblSumlah.Visible = true;
+                cbPayType.Visible = true;
+                lblfirstInstallTypeAlert.Visible = false;
+                cbFirstInstallType.Visible = false;
+                lblFirstInstallType.Visible = false;
             }
         }
 
         private void txtTavenLaiyPrice_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbReceivedChannel.Text == "ຝາກຂົນສົ່ງ")
+            {
+                PayCheck.Visible = true;
+                cbPayType.Visible = true;
+                lblJaiyKrn.Visible = true;
+                DebtCheck.Visible = true;
+                txtFirstInstallment.Visible = true;
+                DeliverCheck.Visible = true;
+                lblOrigin.Visible = true;
+                txtExpressOrig.Visible = true;
+                lbldestination.Visible = true;
+                lblSumlah.Visible = true;
+                txtExpressDes.Visible = true;
+            }
+            else if (cbReceivedChannel.Text == "ມາເອົາເອງ")
+            {
+                PayCheck.Visible = true;
+                cbPayType.Visible = true;
+                lblSumlah.Visible = true;
+                lblJaiyKrn.Visible = true;
+                DebtCheck.Visible = true;
+                txtFirstInstallment.Visible = true;
+                DeliverCheck.Visible = true;
+                lblOrigin.Visible = false;
+                txtExpressOrig.Visible = false;
+                lbldestination.Visible = false;
+                txtExpressDes.Visible = false;
+            }
+        }
+
+        private void PayCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (PayCheck.Checked == true)
+            {
+                DebtCheck.Visible = false;
+                lblJaiyKrn.Visible = false;
+                txtFirstInstallment.Visible = false;
+                lblfirstInstallTypeAlert.Visible = false;
+                cbFirstInstallType.Visible = false;
+                lblFirstInstallType.Visible = false;
+            }
+            else if (PayCheck.Checked == false)
+            {
+                DebtCheck.Visible = true;
+                lblJaiyKrn.Visible = true;
+                txtFirstInstallment.Visible = true;
+                
+                cbFirstInstallType.Visible = false;
+                lblFirstInstallType.Visible = false;
+                lblPayTypeAlert.Visible=false;
+            }
+        }
+
+        private void DeliverCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if(DeliverCheck.Checked == true)
+            {
+                DeliverCheck.Text = "ສົ່ງສິນຄ້າແລ້ວ";
+            }
+            else if(DeliverCheck.Checked == false)
+            {
+                DeliverCheck.Text = "ຍັງບໍ່ທັນສົ່ງ";
+            }
+        }
+
+        private void txtExpressOrig_TextChanged(object sender, EventArgs e)
+        {
+            label7.Visible = false;
+        }
+
+        private void txtExpressDes_TextChanged(object sender, EventArgs e)
+        {
+            label7.Visible = false;
+        }
+
+        private void cbPayType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblPayTypeAlert.Visible=false;
+        }
+
+        private void cbFirstInstallType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblfirstInstallTypeAlert.Visible=false;
+        }
+
+        private void txtFirstInstallment_TextChanged(object sender, EventArgs e)
+        {
+            cbFirstInstallType.Visible = true;
+            lblFirstInstallType.Visible = true;
+            lblfirstInstallAlert.Visible = false;
         }
     }
     }

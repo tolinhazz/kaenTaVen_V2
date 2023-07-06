@@ -13,6 +13,7 @@ namespace kaenTaVen_V2
 {
     public partial class Debt_Detail : Form
     {
+        public static Debt_Detail debt;
         Connector con = new Connector();
         SqlDataAdapter adt = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
@@ -27,7 +28,7 @@ namespace kaenTaVen_V2
 
         public void showDebtData()
         {
-            adt = new SqlDataAdapter("Select * from View_Debt_Detail where payment_status_name = N'ຕິດໜີ້'",con.conder);
+            adt = new SqlDataAdapter("select * from View_Debt_Detail  where payment_status_name = N'ຕິດໜີ້'", con.conder);
             ds.Clear();
             adt.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];

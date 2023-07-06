@@ -30,6 +30,7 @@ namespace kaenTaVen_V2
         private void InitializeComponent()
         {
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnSetting = new FontAwesome.Sharp.IconButton();
             this.btnReport = new FontAwesome.Sharp.IconButton();
             this.btnCustomer = new FontAwesome.Sharp.IconButton();
@@ -47,7 +48,6 @@ namespace kaenTaVen_V2
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -76,6 +76,29 @@ namespace kaenTaVen_V2
             this.panelMenu.Size = new System.Drawing.Size(238, 1406);
             this.panelMenu.TabIndex = 0;
             // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.White;
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.Black;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Tools;
+            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 40;
+            this.iconButton1.Location = new System.Drawing.Point(0, 991);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Padding = new System.Windows.Forms.Padding(11, 0, 22, 0);
+            this.iconButton1.Size = new System.Drawing.Size(238, 133);
+            this.iconButton1.TabIndex = 7;
+            this.iconButton1.Text = "Order Detail";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
             // btnSetting
             // 
             this.btnSetting.BackColor = System.Drawing.Color.White;
@@ -92,7 +115,7 @@ namespace kaenTaVen_V2
             this.btnSetting.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Padding = new System.Windows.Forms.Padding(11, 0, 22, 0);
-            this.btnSetting.Size = new System.Drawing.Size(238, 134);
+            this.btnSetting.Size = new System.Drawing.Size(238, 133);
             this.btnSetting.TabIndex = 6;
             this.btnSetting.Text = "Setting";
             this.btnSetting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -350,29 +373,6 @@ namespace kaenTaVen_V2
             this.iconCurrentChildForm.TabIndex = 0;
             this.iconCurrentChildForm.TabStop = false;
             this.iconCurrentChildForm.Click += new System.EventHandler(this.iconCurrentChildForm_Click);
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.White;
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.Black;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Tools;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(166)))), ((int)(((byte)(91)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 40;
-            this.iconButton1.Location = new System.Drawing.Point(0, 992);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Padding = new System.Windows.Forms.Padding(11, 0, 22, 0);
-            this.iconButton1.Size = new System.Drawing.Size(238, 134);
-            this.iconButton1.TabIndex = 7;
-            this.iconButton1.Text = "Order Detail";
-            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // Form1
             // 

@@ -13,6 +13,8 @@ namespace kaenTaVen_V2
 {
     public partial class Active : Form
     {
+        public static Active act;
+        
         Connector con = new Connector();
         SqlDataAdapter adt = new SqlDataAdapter();
         SqlCommand cmd = new SqlCommand();
@@ -26,13 +28,13 @@ namespace kaenTaVen_V2
         }
         public void showActiveOrder()
         {
-            adt = new SqlDataAdapter("Select * from View_Active_Order where payment_status_name = N'ຕິດໜີ້' Or delivery_status_name= N'ຍັງບໍ່ທັນສົ່ງ'", con.conder);
+            adt = new SqlDataAdapter("select  * from View_Active_Order  where payment_status_name = N'ຕິດໜີ້' Or delivery_status= N'ຍັງບໍ່ທັນສົ່ງ'", con.conder);
             ds.Clear();
             adt.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
 
             dataGridView1.EnableHeadersVisualStyles = false;
-            dataGridView1.Columns[0].HeaderText = "ລະຫັດ";
+          /*  dataGridView1.Columns[0].HeaderText = "ລະຫັດ";
             dataGridView1.Columns[1].HeaderText = "ຊື່ລູກຄ້າ";
             dataGridView1.Columns[2].HeaderText = "ເລກບິນ";
             dataGridView1.Columns[3].HeaderText = "ລາຄາບິນ";
@@ -40,7 +42,7 @@ namespace kaenTaVen_V2
             dataGridView1.Columns[5].HeaderText = "ສະຖານະການຈ່າຍ";
             dataGridView1.Columns[6].HeaderText = "ປະເພດການຈ່າຍ";
             dataGridView1.Columns[7].HeaderText = "ສະຖານະການສົ່ງເຄື່ອງ";
-            dataGridView1.Columns[8].HeaderText = "ມື້ຝາກເຄື່ອງ";
+            dataGridView1.Columns[8].HeaderText = "ມື້ຝາກເຄື່ອງ";*/
 
 
             dataGridView1.Columns[0].Width = 150;
